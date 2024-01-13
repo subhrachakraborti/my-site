@@ -1,0 +1,7 @@
+# Redirects
+/home301   /   301
+/home302   /   302
+/querystrings   /?query=string   301
+
+# Custom 404 redirect
+/*   /error.html   404
