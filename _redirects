@@ -1,4 +1,5 @@
 # Redirects
+/index.html/   home
 /home301   /   301
 /home302   /   302
 /querystrings   /?query=string   301
