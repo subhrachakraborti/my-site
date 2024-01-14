@@ -4,4 +4,4 @@
 /querystrings   /?query=string   301
 
 # Custom 404 redirect
-/*   /error.html   404
+/*   /404.html   404
