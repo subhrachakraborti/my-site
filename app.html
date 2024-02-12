@@ -2,22 +2,223 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name='robots' content='max-image-preview:large' />
-    <meta name="google-site-verification" content="O1yxNPSBBam0udPDaD5vIBAqlmBls8aoJDJUtzTgcnA" />
-    <meta name="p:domain_verify" content="3c039f8c2128524bca7687c05e6f6ad8" />
-    <title>Download SubhraVerse</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Download SubhraVerse!</title>
+    <style>
+        body {
+            padding: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            background-color: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        
+        h1 {
+            color: #007bff;
+            text-align: center;
+            animation: fadeInDown 1s ease-out;
+        }
+        
+        p {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        a {
+            display: block;
+            width: fit-content;
+            margin: 5px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            animation: fadeIn 1s ease-out;
+        }
+        
+        a:hover {
+            background-color: #0056b3;
+        }
+        
+        .container {
+            text-align: center;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+        
+        .dropdown-toggle {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .dropdown-toggle:hover {
+            background-color: #218838;
+        }
+        
+        .dropdown-menu {
+            min-width: 160px;
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            padding: 5px 0;
+            text-align: center;
+            font-size: 20px;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        .dropdown-menu a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+        
+        .dropdown-menu a:hover {
+            background-color: #e9ecef;
+        }
+        /* Back button */
+        
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            animation: fadeIn 1s ease-out;
+        }
+        
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+        /* Animations */
+        
+        @keyframes fadeInDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <a href="/20.apk" download>Click to Download</a>
+    <h1>Welcome to My Download Page!</h1>
+    <p id="par">Click the link below to download the ANDROID APP.</p>
+    <a id="apk" href="20.apk" download>Download Apk App</a>
+
+    <a id="aab" href="20.aab" download>Download Aab App</a>
+    <div class="container">
+        <div class="dropdown">
+            <button class="dropdown-toggle" type="button" data-toggle="dropdown">
+                Language Option
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#" onclick="changeLanguage('en')">English</a></li>
+                <li><a href="#" onclick="changeLanguage('ba')">Bangla</a></li>
+                <li><a href="#" onclick="changeLanguage('hi')">Hindi</a></li>
+                <li><a href="#" onclick="changeLanguage('ta')">Tamil</a></li>
+                <li><a href="#" onclick="changeLanguage('te')">Telugu</a></li>
+                <li><a href="#" onclick="changeLanguage('ar')">Arabic</a></li>
+                <li><a href="#" onclick="changeLanguage('ru')">Russian</a></li>
+                <li><a href="#" onclick="changeLanguage('es')">Spanish</a></li>
+                <li><a href="#" onclick="changeLanguage('de')">German</a></li>
+            </ul>
+        </div>
+    </div>
+    <button class="back-button" onclick="goBack()">Go Back</button>
+    <script>
+        function changeLanguage(languageCode) {
+            if (languageCode === 'en') {
+                document.getElementById('par').textContent = 'Click the link below to download the ANDROID APP';
+                document.getElementById('apk').textContent = 'Download Apk App';
+                document.getElementById('aab').textContent = 'Download Aab App';
+            } else if (languageCode === 'ba') {
+                document.getElementById('par').textContent = 'ANDROID APP ডাউনলোড করতে নিচের লিঙ্কে ক্লিক করুন';
+                document.getElementById('apk').textContent = 'Apk অ্যাপ ডাউনলোড করুন';
+                document.getElementById('aab').textContent = 'Aab অ্যাপ ডাউনলোড করুন';
+            } else if (languageCode === 'hi') {
+                document.getElementById('par').textContent = 'एंड्रॉइड ऐप डाउनलोड करने के लिए नीचे दिए गए लिंक पर क्लिक करें';
+                document.getElementById('apk').textContent = 'एपीके ऐप डाउनलोड करें';
+                document.getElementById('aab').textContent = 'एएबी ऐप डाउनलोड करें';
+            } else if (languageCode === 'ta') {
+                document.getElementById('par').textContent = 'ANDROID செயலியை பதிவிறக்கம் செய்ய கீழே உள்ள லிங்கை கிளிக் செய்யவும்';
+                document.getElementById('apk').textContent = 'Apk பயன்பாட்டைப் பதிவிறக்கவும்';
+                document.getElementById('aab').textContent = 'Aab பயன்பாட்டைப் பதிவிறக்கவும்';
+            } else if (languageCode === 'te') {
+                document.getElementById('par').textContent = 'ANDROID యాప్‌ని డౌన్‌లోడ్ చేసుకోవడానికి క్రింది లింక్‌ను క్లిక్ చేయండి';
+                document.getElementById('apk').textContent = 'Apk యాప్‌ని డౌన్‌లోడ్ చేయండి';
+                document.getElementById('aab').textContent = 'Aab యాప్‌ని డౌన్‌లోడ్ చేయండి';
+            } else if (languageCode === 'ar') {
+                document.getElementById('par').textContent = 'انقر على الرابط أدناه لتنزيل تطبيق ANDROID';
+                document.getElementById('apk').textContent = 'تنزيل تطبيق APK';
+                document.getElementById('aab').textContent = 'تنزيل تطبيق AAB';
+            } else if (languageCode === 'ru') {
+                document.getElementById('par').textContent = 'Нажмите на ссылку ниже, чтобы загрузить ПРИЛОЖЕНИЕ ДЛЯ ANDROID';
+                document.getElementById('apk').textContent = 'Скачать APK-приложение';
+                document.getElementById('aab').textContent = 'Скачать AAB-приложение';
+            } else if (languageCode === 'es') {
+                document.getElementById('par').textContent = 'Haga clic en el siguiente enlace para descargar la APLICACIÓN ANDROID';
+                document.getElementById('apk').textContent = 'Descargar la aplicación Apk';
+                document.getElementById('aab').textContent = 'Descargar la aplicación Aab';
+            } else if (languageCode === 'de') {
+                document.getElementById('par').textContent = 'Klicken Sie auf den Link unten, um die ANDROID-APP herunterzuladen';
+                document.getElementById('apk').textContent = 'Laden Sie die Apk-App herunter';
+                document.getElementById('aab').textContent = 'Laden Sie die Aab-App herunter';
+            }
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
-<script type="text/javascript">
-    function startDownload() {
-        var url = 'app.html'; // Replace with your file URL
-        window.open(url, 'Download');
-    }
-</script>
 
 </html>
