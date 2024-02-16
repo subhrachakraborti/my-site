@@ -1,1 +1,4 @@
 ErrorDocument 404 /404.html
+RewriteEngine On
+RewriteCond %{HTTP_HOST}  !^www\.subhrachakraborti\.com$ [NC]
+RewriteRule ^(.*) http://www.subhrachakraborti.com/$1 [L,R]
