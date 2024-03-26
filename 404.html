@@ -73,29 +73,32 @@
 
 <body>
     <div class="container">
-        <span class="back-button" onclick="goBack()">🔙</span>
-        <h4>ERROR 404 :<br>PAGE NOT FOUND!</h4><br>
+        <span class="back-button" onclick="goBack()">🔙</span><br>
+        <div style="color:red"><b>ERROR 404</b></div>
+        </h3>
+        <h4>PAGE NOT FOUND!
+        </h4><br>
         <h6>TRY AGAIN!</h6>
         <br><br><br><br><br><br><br><br>
         <hr>
         <div class="circle" style="animation-delay: 0s;"></div>
-        <div class="circle" style="animation-delay: 0.1s;"></div>
         <div class="circle" style="animation-delay: 0.2s;"></div>
-        <div class="circle" style="animation-delay: 0.3s;"></div>
         <div class="circle" style="animation-delay: 0.4s;"></div>
-        <div class="circle" style="animation-delay: 0.5s;"></div>
         <div class="circle" style="animation-delay: 0.6s;"></div>
-        <div class="circle" style="animation-delay: 0.7s;"></div>
         <div class="circle" style="animation-delay: 0.8s;"></div>
-        <div class="circle" style="animation-delay: 0.9s;"></div>
-        <div class="circle" style="animation-delay: 1s;"></div>
-        <div class="circle" style="animation-delay: 1.1s;"></div>
-        <div class="circle" style="animation-delay: 1.2s;"></div>
-        <div class="circle" style="animation-delay: 1.3s;"></div>
+        <div class="circle" style="animation-delay: 1.0s;"></div>
+        <div class="circle" style="animation-delay: 1.2;"></div>
         <div class="circle" style="animation-delay: 1.4s;"></div>
-        <marquee class="marquee" behavior="alternate" scrollamount="8.5">
+        <div class="circle" style="animation-delay: 1.6s;"></div>
+        <div class="circle" style="animation-delay: 1.8s;"></div>
+        <div class="circle" style="animation-delay: 2.0;"></div>
+        <div class="circle" style="animation-delay: 2.2s;"></div>
+        <div class="circle" style="animation-delay: 2.4s;"></div>
+        <div class="circle" style="animation-delay: 2.6s;"></div>
+        <div class="circle" style="animation-delay: 2.8s;"></div>
+        <!--<marquee class="marquee" behavior="alternate" scrollamount="8.5">
             <h4>SUBHRA CHAKRABORTI • শুভ্র চক্রবর্তী • शुभ्र चक्रवर्ती • ஷுவ்ரோ சக்ரபோர்தி • శువ్రో చక్రబోర్తి • شوفرا تشاكرابورتي • СУБХРА ЧАКРАБОРТИ</h4>
-        </marquee>
+        </marquee>-->
     </div>
 
 
@@ -105,7 +108,7 @@
 
     <script>
         function goBack() {
-            window.location.href = "/index.html";
+            window.history.back();
         }
     </script>
 </body>
