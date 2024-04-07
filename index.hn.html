@@ -64,117 +64,7 @@
 
         gtag('config', 'G-QK8MWKMS3M');
     </script>
-    <script>
-        window._wpemojiSettings = {
-                "baseUrl": "https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/",
-                "ext": ".png",
-                "svgUrl": "https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/",
-                "svgExt": ".svg",
-                "source": {
-                    "concatemoji": "https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1677072837i&ver=6.5-alpha-57144"
-                } <
-                script >
-                window._wpemojiSettings = {
-                    "baseUrl": "https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/",
-                    "ext": ".png",
-                    "svgUrl": "https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/",
-                    "svgExt": ".svg",
-                    "source": {
-                        "concatemoji": "https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1677072837i&ver=6.5-alpha-57336"
-                    }
-                };
-                /*! This file is auto-generated */
-                ! function(i, n) {
-                    var o, s, e;
 
-                    function c(e) {
-                        try {
-                            var t = {
-                                supportTests: e,
-                                timestamp: (new Date).valueOf()
-                            };
-                            sessionStorage.setItem(o, JSON.stringify(t))
-                        } catch (e) {}
-                    }
-
-                    function p(e, t, n) {
-                        e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);
-                        var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data),
-                            r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data));
-                        return t.every(function(e, t) {
-                            return e === r[t]
-                        })
-                    }
-
-                    function u(e, t, n) {
-                        switch (t) {
-                            case "flag":
-                                return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");
-                            case "emoji":
-                                return !n(e, "\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff", "\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")
-                        }
-                        return !1
-                    }
-
-                    function f(e, t, n) {
-                        var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement("canvas"),
-                            a = r.getContext("2d", {
-                                willReadFrequently: !0
-                            }),
-                            o = (a.textBaseline = "top", a.font = "600 32px Arial", {});
-                        return e.forEach(function(e) {
-                            o[e] = t(a, e, n)
-                        }), o
-                    }
-
-                    function t(e) {
-                        var t = i.createElement("script");
-                        t.src = e, t.defer = !0, i.head.appendChild(t)
-                    }
-                    "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = {
-                        everything: !0,
-                        everythingExceptFlag: !0
-                    }, e = new Promise(function(e) {
-                        i.addEventListener("DOMContentLoaded", e, {
-                            once: !0
-                        })
-                    }), new Promise(function(t) {
-                        var n = function() {
-                            try {
-                                var e = JSON.parse(sessionStorage.getItem(o));
-                                if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests
-                            } catch (e) {}
-                            return null
-                        }();
-                        if (!n) {
-                            if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try {
-                                var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));",
-                                    r = new Blob([e], {
-                                        type: "text/javascript"
-                                    }),
-                                    a = new Worker(URL.createObjectURL(r), {
-                                        name: "wpTestEmojiSupports"
-                                    });
-                                return void(a.onmessage = function(e) {
-                                    c(n = e.data), a.terminate(), t(n)
-                                })
-                            } catch (e) {}
-                            c(n = f(s, u, p))
-                        }
-                        t(n)
-                    }).then(function(e) {
-                        for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]);
-                        n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function() {
-                            n.DOMReady = !0
-                        }
-                    }).then(function() {
-                        return e
-                    }).then(function() {
-                        var e;
-                        n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji)))
-                    }))
-                }((window, document), window._wpemojiSettings);
-    </script>
     <link crossorigin='anonymous' rel='stylesheet' id='all-css-0-1' href='https://s0.wp.com/_static/??-eJxljUsKwzAMRC9UVzTQhCxKzyLHwjiRP1gyJrdvumpDtjPvzUAvZslJKSlYzt4Ubj4kgZ6rQyfgOVvk+yJygz82th8ZnCcVoHa0eQtkGDsoxcKoJCC6M10GTmcR60YakjcWKxzoOfnK7/h6jPM0PodhmtcP7tJDqw==&cssminify=yes'
         type='text/css' media='all' />
     <style id='wp-block-navigation-link-inline-css'>
@@ -1973,40 +1863,9 @@
         }
     </style>
     <link crossorigin='anonymous' rel='stylesheet' id='all-css-38-1' href='https://s0.wp.com/wp-content/themes/h4/global.css?m=1420737423i&cssminify=yes' type='text/css' media='all' />
-    <script id="media-video-jwt-bridge-js-extra">
-        var videopressAjax = {
-            "ajaxUrl": "https:\/\/subhradata.wordpress.com\/wp-admin\/admin-ajax.php",
-            "bridgeUrl": "\/wp-content\/mu-plugins\/jetpack-plugin\/sun\/jetpack_vendor\/automattic\/jetpack-videopress\/build\/lib\/token-bridge.js",
-            "post_id": "0"
-        };
-    </script>
-    <script id="wpcom-actionbar-placeholder-js-extra">
-        var actionbardata = {
-            "siteID": "227254600",
-            "postID": "0",
-            "siteURL": "https:\/\/subhra.data.blog",
-            "xhrURL": "https:\/\/subhra.data.blog\/wp-admin\/admin-ajax.php",
-            "nonce": "41bd48fec0",
-            "isLoggedIn": "",
-            "statusMessage": "",
-            "subsEmailDefault": "instantly",
-            "proxyScriptUrl": "https:\/\/s0.wp.com\/wp-content\/js\/wpcom-proxy-request.js?ver=20211021",
-            "i18n": {
-                "followedText": "New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/read\">Reader<\/a>",
-                "foldBar": "Collapse this bar",
-                "unfoldBar": "Expand this bar"
-            }
-        };
-    </script>
+
     <script crossorigin='anonymous' type='text/javascript' src='https://s0.wp.com/_static/??-eJxdTlsKAjEMvJAxvkD9EI8ifcTStU1K0656e13QBf0a5sHM4L2AE27EDQfFLDYmgq5UTXhrEPkqy0EX+JurqUGp8nj+e7lDST1EVhyoFeNuH47a+StdRmIvFU1vkk1r0c3hMXqSUkkVbY/JY4oWm9yIwdboA/0P2iRhnrxL9cYruGRUSaenLhccNxMAC0Pwpb4rzvm03q/2x+12tzsML6fyYOs='></script>
-    <script id="rlt-proxy-js-after">
-        window.addEventListener('DOMContentLoaded', function() {
-            rltInitialize({
-                "token": null,
-                "iframeOrigins": ["https:\/\/widgets.wp.com"]
-            });
-        });
-    </script>
+
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://subhradata.wordpress.com/xmlrpc.php?rsd" />
     <meta name="generator" content="WordPress.com" />
     <script id="wp-load-polyfill-importmap">
@@ -2037,36 +1896,7 @@
     <meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s0.wp.com/i/favicon.ico" />
     <meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" />
     <meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" />
-    <script type="text/javascript">
-        function __ATA_CC() {
-            var v = document.cookie.match('(^|;) ?personalized-ads-consent=([^;]*)(;|$)');
-            return v ? 1 : 0;
-        }
-        var __ATA_PP = {
-            'pt': 0,
-            'ht': 0,
-            'tn': 'creatio-2',
-            'uloggedin': 0,
-            'amp': false,
-            'consent': __ATA_CC(),
-            'gdpr_applies': false,
-            'ad': {
-                'label': {
-                    'text': 'Advertisements'
-                },
-                'reportAd': {
-                    'text': 'Report this Ad'
-                }
-            },
-            'disabled_slot_formats': [],
-            'siteid': 8982,
-            'blogid': 227254600
-        };
-        var __ATA = __ATA || {};
-        __ATA.cmd = __ATA.cmd || [];
-        __ATA.criteo = __ATA.criteo || {};
-        __ATA.criteo.cmd = __ATA.criteo.cmd || [];
-    </script>
+
     <script type="text/javascript">
         (function() {
             var g = Date.now || function() {
