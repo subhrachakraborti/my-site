@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <title>Download SubhraVerse!</title>
+    <title>Download The SC App!</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <style>
         body {
@@ -16,20 +16,20 @@
             color: #fff;
             font-family: Arial, sans-serif;
         }
-
+        
         h1 {
             color: #007bff;
             text-align: center;
             animation: fadeInDown 1s ease-out;
         }
-
+        
         p {
             font-size: 18px;
             text-align: center;
             margin-bottom: 20px;
             animation: fadeInUp 1s ease-out;
         }
-
+        
         a {
             display: block;
             width: fit-content;
@@ -42,22 +42,22 @@
             transition: background-color 0.3s;
             animation: fadeIn 1s ease-out;
         }
-
+        
         a:hover {
             background-color: #0056b3;
         }
-
+        
         .container {
             text-align: center;
         }
-
+        
         .dropdown {
             position: relative;
             display: inline-block;
             margin-top: 20px;
             animation: fadeIn 1s ease-out;
         }
-
+        
         .dropdown-toggle {
             background-color: #28a745;
             color: #fff;
@@ -67,11 +67,11 @@
             font-size: 16px;
             cursor: pointer;
         }
-
+        
         .dropdown-toggle:hover {
             background-color: #218838;
         }
-
+        
         .dropdown-menu {
             min-width: 160px;
             background-color: #f8f9fa;
@@ -81,7 +81,7 @@
             font-size: 20px;
             animation: fadeIn 0.5s ease-out;
         }
-
+        
         .dropdown-menu a {
             color: #333;
             text-decoration: none;
@@ -89,13 +89,12 @@
             padding: 10px 20px;
             transition: background-color 0.3s;
         }
-
+        
         .dropdown-menu a:hover {
             background-color: #e9ecef;
         }
-
         /* Back button */
-
+        
         .back-button {
             position: fixed;
             bottom: 20px;
@@ -109,42 +108,56 @@
             transition: background-color 0.3s;
             animation: fadeIn 1s ease-out;
         }
-
+        
+        .home-button {
+            position: fixed;
+            bottom: 70px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            animation: fadeIn 1s ease-out;
+        }
+        
         .back-button:hover {
             background-color: #0056b3;
         }
-
+        
+        .home-button:hover {
+            background-color: #0056b3;
+        }
         /* Animations */
-
+        
         @keyframes fadeInDown {
             from {
                 transform: translateY(-100%);
                 opacity: 0;
             }
-
             to {
                 transform: translateY(0);
                 opacity: 1;
             }
         }
-
+        
         @keyframes fadeInUp {
             from {
                 transform: translateY(100%);
                 opacity: 0;
             }
-
             to {
                 transform: translateY(0);
                 opacity: 1;
             }
         }
-
+        
         @keyframes fadeIn {
             from {
                 opacity: 0;
             }
-
             to {
                 opacity: 1;
             }
@@ -155,9 +168,9 @@
 <body>
     <h1>Welcome to My Download Page!</h1>
     <p id="par">Click the link below to download the ANDROID APP.</p>
-    <a id="apk" href="20.apk" download>Download Apk App</a>
+    <a id="apk" href="The SC App 10.apk" download>Download Apk App</a>
 
-    <a id="aab" href="20.aab" download>Download Aab App</a>
+    <a id="aab" href="The SC App 10.aab" download>Download Aab App</a>
     <div class="container">
         <div class="dropdown">
             <button class="dropdown-toggle" type="button" data-toggle="dropdown">
@@ -177,7 +190,8 @@
             </ul>
         </div>
     </div>
-    <button class="back-button" onclick="goBack()">Go Back</button>
+    <button class="back-button" onclick="goBack()"><i class="fa-solid fa-backward"></i> Go Back </button>
+    <button class="home-button" onclick="goHome()"><i class="fa-solid fa-house"></i> Go Home </button>
     <script>
         function changeLanguage(languageCode) {
             if (languageCode === 'en') {
@@ -222,9 +236,14 @@
         function goBack() {
             window.history.back();
         }
+
+        function goHome() {
+            window.open("https://subhrachakraborti.com/", "_self");
+        }
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/0d1c8aecfe.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
