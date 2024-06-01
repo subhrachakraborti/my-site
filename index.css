@@ -1,20 +1,27 @@
-.bb-bottom-banner {
-    border-top: 3px solid #007aff;
-    border-bottom: 3px solid #007aff;
+#bb-header {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    padding-top: 0px;
+    margin-top: 0px;
 }
 
-.bb-bottom-banner .text2 {
-    color: #007aff;
-    border: 1px solid #007aff;
-    fill: #007aff;
+#bb-header.scrolled {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .1);
 }
 
-.bb-bottom-banner:hover .text2 {
-    background-color: #007aff;
+#bb-header-spacing {
+    transition: padding 0.4s ease;
 }
 
-.bb-side-banner .link1 {
-    border-color: #007aff;
+#bb-header.scrolled #bb-header-spacing {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 2em;
+}
+
+* {
+    scroll-margin-top: 90px;
 }
 
 body {
@@ -264,28 +271,21 @@ body {
     contain-intrinsic-size: 16px;
 }
 
-#bb-header {
-    position: sticky;
-    z-index: 100;
-    top: 0;
-    padding-top: 0px;
-    margin-top: 0px;
+.bb-bottom-banner {
+    border-top: 3px solid #007aff;
+    border-bottom: 3px solid #007aff;
 }
 
-#bb-header.scrolled {
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .1);
+.bb-bottom-banner .text2 {
+    color: #007aff;
+    border: 1px solid #007aff;
+    fill: #007aff;
 }
 
-#bb-header-spacing {
-    transition: padding 0.4s ease;
+.bb-bottom-banner:hover .text2 {
+    background-color: #007aff;
 }
 
-#bb-header.scrolled #bb-header-spacing {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    margin-bottom: 2em;
-}
-
-* {
-    scroll-margin-top: 90px;
+.bb-side-banner .link1 {
+    border-color: #007aff;
 }
