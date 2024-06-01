@@ -66,6 +66,34 @@
         gtag('config', 'G-QK8MWKMS3M');
     </script>
     <!-- Google Analytics -->
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const navOverlay = document.querySelector('.nav-overlay');
+        const navPanel = document.querySelector('.nav-panel');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        navOverlay.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+
+        navPanel.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
+    </script>
+    <style>
+        @media (max-width: 768px) {
+            .bb-desktop-nav {
+                display: none;
+            }
+            .bb-mobile-nav {
+                display: block;
+            }
+        }
+    </style>
     <link rel="shortcut icon" href="https://site-dyhsrdke.wsecdn1.websitecdn.com/uploads/favicon.ico?v=243005034550">
     <link rel="apple-touch-icon" href="https://site-dyhsrdke.wsecdn1.websitecdn.com/uploads/favicon.ico?v=243005034550">
     <link rel="canonical" href="http://subhrachakraborti.website3.me/about">
