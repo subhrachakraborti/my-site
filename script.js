@@ -46,3 +46,15 @@ function gtag() {
 }
 gtag('js', new Date());
 gtag('config', 'G-QK8MWKMS3M');
+
+//end code
+
+
+
+function goBack() {
+    window.history.back();
+}
+
+function goHome() {
+    window.open("https://subhrachakraborti.com/", "_self");
+}
