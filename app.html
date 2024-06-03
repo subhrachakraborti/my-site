@@ -6,10 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DOWNLOAD OFFICIAL APPLICATIONS - SUBHRA CHAKRABORTI</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="/bootstrap.css" />
+    <!--<link rel="stylesheet" type="text/css" href="/bootstrap.css" />-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <meta name="description" content="DOWNLOAD OFFICIAL APPLICATIONS from SUBHRA CHAKRABORTI">
     <meta name="keywords" content="Subhra, Subhra Chakraborti, SubhraVerse, Subhra Verse, Subhra Site">
     <meta name="author" content="Subhra Chakraborti">
+
+
+    <!-- slider stylesheet -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="/bootstrap.css" />
 
     <!-- fonts style -->
     <link
@@ -22,7 +31,6 @@
 </head>
 
 <body>
-
     <div class="hero_area">
         <!-- header section strats -->
         <header class="header_section">
@@ -81,7 +89,7 @@
                                             <li class="nav-item" style="align-self: center;">
                                                 <div class="social_box" style="align-self: center;">
                                                     <!--<a href="#" class="social_icons">
-                                                        <i class="fa-brands fa-facebook" style="color: #000000;"></i>
+                                                        <i class="fa-brands fa-facebook fa-beat" style="color: #000000;"></i>
                                                     </a>-->
                                                     <a href="https://x.com/subhra_05" class="social_icons">
                                                         <i class="fa-brands fa-x-twitter fa-beat"
@@ -117,7 +125,7 @@
                 </div>
             </div>
         </header>
-        <!-- end header section-->
+        <!-- end header section -->
         <div class="col-lg-9 col-md-7 app">
             <h3 style="text-transform: uppercase;">Welcome to My Download Page!</h3>
 
@@ -127,29 +135,30 @@
                         Language Option
                         <span class="caret"></span>
                     </button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <a href="#" onclick="changeLanguage('en')">English</a>
-                        <a href="#" onclick="changeLanguage('ba')">Bangla</a>
-                        <a href="#" onclick="changeLanguage('hi')">Hindi</a>
-                        <a href="#" onclick="changeLanguage('ta')">Tamil</a>
-                        <a href="#" onclick="changeLanguage('te')">Telugu</a>
-                        <a href="#" onclick="changeLanguage('ar')">Arabic</a>
-                        <a href="#" onclick="changeLanguage('ru')">Russian</a>
-                        <a href="#" onclick="changeLanguage('es')">Spanish</a>
-                        <a href="#" onclick="changeLanguage('de')">German</a>
-                    </div>
+                    <ul class="dropdown-menu">
+
+                        <li><a href="#" onclick="changeLanguage('en')">English</a></li>
+                        <li><a href="#" onclick="changeLanguage('ba')">Bangla</a></li>
+                        <li><a href="#" onclick="changeLanguage('hi')">Hindi</a></li>
+                        <li><a href="#" onclick="changeLanguage('ta')">Tamil</a></li>
+                        <li><a href="#" onclick="changeLanguage('te')">Telugu</a></li>
+                        <li><a href="#" onclick="changeLanguage('ar')">Arabic</a></li>
+                        <li><a href="#" onclick="changeLanguage('ru')">Russian</a></li>
+                        <li><a href="#" onclick="changeLanguage('es')">Spanish</a></li>
+                        <li><a href="#" onclick="changeLanguage('de')">German</a></li>
+                    </ul>
                 </div>
             </div><br />
             <p id="par1">Click the link below to download THE SC APP (android).</p>
-            <button id="apk" href="The SC App 10.apk" download>Download Apk App</button>
+            <button id="apk1" href="The SC App 10.apk" download>Download Apk App</button>
             <br />
-            <button id="aab" href="The SC App 10.aab" download>Download Aab App</button>
+            <button id="aab1" href="The SC App 10.aab" download>Download Aab App</button>
             <br />
             <hr /><br />
             <p id="par2">Click the link below to download THE SubhraVerse APP (android).</p>
-            <button id="apk" href="SubhraVerse.apk" download>Download Apk App</button>
+            <button id="apk2" href="SubhraVerse.apk" download>Download Apk App</button>
             <br />
-            <button id="aab" href="SubhraVerse.aab" download>Download Aab App</button>
+            <button id="aab2" href="SubhraVerse.aab" download>Download Aab App</button>
         </div>
         <hr />
         <!-- info section -->
@@ -226,6 +235,8 @@
         <!-- end info section -->
 </body>
 <script src="https://kit.fontawesome.com/0d1c8aecfe.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/jquery-3.4.1.min.js"></script>
+<!--<script type="text/javascript" src="/bootstrap.js"></script>-->
 <script src="/script.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -253,20 +264,26 @@
     }
 </script>
 <script>
+    $(document).ready(function () {
+        $('.navbar-nav>li>a').on('click', function () {
+            $('.navbar-collapse').collapse('hide');
+        });
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
     function drop() {
-        document.getElementById("dropdown-toggle").classList.toggle("show");
+        document.querySelector(".dropdown ul").classList.toggle("show");
     }
 
     // Close the dropdown if the user clicks outside of it
     window.onclick = function (event) {
         if (!event.target.matches('.dropdown-toggle')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
+            var dropdowns = document.querySelector(".dropdown ul");
+            if (dropdowns.classList.contains('show')) {
+                dropdowns.classList.remove('show');
             }
         }
     }
@@ -276,48 +293,66 @@
         if (languageCode === 'en') {
             document.getElementById('par1').textContent = 'Click the link below to download THE SC APP (android).';
             document.getElementById('par2').textContent = 'Click the link below to download THE SubhraVerse APP (android).';
-            document.getElementById('apk').textContent = 'Download Apk App';
-            document.getElementById('aab').textContent = 'Download Aab App';
+            document.getElementById('apk1').textContent = 'Download Apk App';
+            document.getElementById('aab1').textContent = 'Download Aab App';
+            document.getElementById('apk2').textContent = 'Download Apk App';
+            document.getElementById('aab2').textContent = 'Download Aab App';
         } else if (languageCode === 'ba') {
             document.getElementById('par1').textContent = 'SC অ্যাপ (অ্যান্ড্রয়েড) ডাউনলোড করতে নিচের লিঙ্কে ক্লিক করুন।';
             document.getElementById('par2').textContent = 'SubhraVerse APP (অ্যান্ড্রয়েড) ডাউনলোড করতে নিচের লিঙ্কে ক্লিক করুন।';
-            document.getElementById('apk').textContent = 'Apk অ্যাপ ডাউনলোড করুন';
-            document.getElementById('aab').textContent = 'Aab অ্যাপ ডাউনলোড করুন';
+            document.getElementById('apk1').textContent = 'Apk অ্যাপ ডাউনলোড করুন';
+            document.getElementById('aab1').textContent = 'Aab অ্যাপ ডাউনলোড করুন';
+            document.getElementById('apk2').textContent = 'Apk অ্যাপ ডাউনলোড করুন';
+            document.getElementById('aab2').textContent = 'Aab অ্যাপ ডাউনলোড করুন';
         } else if (languageCode === 'hi') {
             document.getElementById('par1').textContent = 'SC APP (एंड्रॉइड) डाउनलोड करने के लिए नीचे दिए गए लिंक पर क्लिक करें।';
             document.getElementById('par2').textContent = 'SubhraVerse APP (एंड्रॉइड) डाउनलोड करने के लिए नीचे दिए गए लिंक पर क्लिक करें।';
-            document.getElementById('apk').textContent = 'एपीके ऐप डाउनलोड करें';
-            document.getElementById('aab').textContent = 'एएबी ऐप डाउनलोड करें';
+            document.getElementById('apk1').textContent = 'एपीके ऐप डाउनलोड करें';
+            document.getElementById('aab1').textContent = 'एएबी ऐप डाउनलोड करें';
+            document.getElementById('apk2').textContent = 'एपीके ऐप डाउनलोड करें';
+            document.getElementById('aab2').textContent = 'एएबी ऐप डाउनलोड करें';
         } else if (languageCode === 'ta') {
             document.getElementById('par1').textContent = 'SC APP (android) ஐ பதிவிறக்கம் செய்ய கீழே உள்ள இணைப்பை கிளிக் செய்யவும்.';
             document.getElementById('par2').textContent = 'SubhraVerse APP (android) ஐ பதிவிறக்கம் செய்ய கீழே உள்ள இணைப்பை கிளிக் செய்யவும்.';
-            document.getElementById('apk').textContent = 'Apk பயன்பாட்டைப் பதிவிறக்கவும்';
-            document.getElementById('aab').textContent = 'Aab பயன்பாட்டைப் பதிவிறக்கவும்';
+            document.getElementById('apk1').textContent = 'Apk பயன்பாட்டைப் பதிவிறக்கவும்';
+            document.getElementById('aab1').textContent = 'Aab பயன்பாட்டைப் பதிவிறக்கவும்';
+            document.getElementById('apk2').textContent = 'Apk பயன்பாட்டைப் பதிவிறக்கவும்';
+            document.getElementById('aab2').textContent = 'Aab பயன்பாட்டைப் பதிவிறக்கவும்';
         } else if (languageCode === 'te') {
             document.getElementById('par1').textContent = 'SC APP (ఆండ్రాయిడ్) డౌన్‌లోడ్ చేయడానికి క్రింది లింక్‌ను క్లిక్ చేయండి.';
             document.getElementById('par2').textContent = 'SubhraVerse APP (android)ని డౌన్‌లోడ్ చేయడానికి క్రింది లింక్‌ను క్లిక్ చేయండి.';
-            document.getElementById('apk').textContent = 'Apk యాప్‌ని డౌన్‌లోడ్ చేయండి';
-            document.getElementById('aab').textContent = 'Aab యాప్‌ని డౌన్‌లోడ్ చేయండి';
+            document.getElementById('apk1').textContent = 'Apk యాప్‌ని డౌన్‌లోడ్ చేయండి';
+            document.getElementById('aab1').textContent = 'Aab యాప్‌ని డౌన్‌లోడ్ చేయండి';
+            document.getElementById('apk2').textContent = 'Apk యాప్‌ని డౌన్‌లోడ్ చేయండి';
+            document.getElementById('aab2').textContent = 'Aab యాప్‌ని డౌన్‌లోడ్ చేయండి';
         } else if (languageCode === 'ar') {
             document.getElementById('par1').textContent = 'انقر على الرابط أدناه لتنزيل تطبيق SC (Android).';
             document.getElementById('par2').textContent = 'انقر على الرابط أدناه لتنزيل تطبيق SubhraVerse (Android).';
-            document.getElementById('apk').textContent = 'تنزيل تطبيق APK';
-            document.getElementById('aab').textContent = 'تنزيل تطبيق AAB';
+            document.getElementById('apk1').textContent = 'تنزيل تطبيق APK';
+            document.getElementById('aab1').textContent = 'تنزيل تطبيق AAB';
+            document.getElementById('apk2').textContent = 'تنزيل تطبيق APK';
+            document.getElementById('aab2').textContent = 'تنزيل تطبيق AAB';
         } else if (languageCode === 'ru') {
             document.getElementById('par1').textContent = 'Нажмите на ссылку ниже, чтобы загрузить ПРИЛОЖЕНИЕ SC (android).';
             document.getElementById('par2').textContent = 'Нажмите на ссылку ниже, чтобы загрузить ПРИЛОЖЕНИЕ SubhraVerse (android).';
-            document.getElementById('apk').textContent = 'Скачать APK-приложение';
-            document.getElementById('aab').textContent = 'Скачать AAB-приложение';
+            document.getElementById('apk1').textContent = 'Скачать APK-приложение';
+            document.getElementById('aab1').textContent = 'Скачать AAB-приложение';
+            document.getElementById('apk2').textContent = 'Скачать APK-приложение';
+            document.getElementById('aab2').textContent = 'Скачать AAB-приложение';
         } else if (languageCode === 'es') {
             document.getElementById('par1').textContent = 'Haga clic en el enlace a continuación para descargar LA APLICACIÓN SC (Android).';
             document.getElementById('par2').textContent = 'Haga clic en el enlace a continuación para descargar LA APLICACIÓN SubhraVerse (Android).';
-            document.getElementById('apk').textContent = 'Descargar la aplicación Apk';
-            document.getElementById('aab').textContent = 'Descargar la aplicación Aab';
+            document.getElementById('apk1').textContent = 'Descargar la aplicación Apk';
+            document.getElementById('aab1').textContent = 'Descargar la aplicación Aab';
+            document.getElementById('apk2').textContent = 'Descargar la aplicación Apk';
+            document.getElementById('aab2').textContent = 'Descargar la aplicación Aab';
         } else if (languageCode === 'de') {
             document.getElementById('par1').textContent = 'Klicken Sie auf den Link unten, um die SC-App (Android) herunterzuladen.';
             document.getElementById('par2').textContent = 'Klicken Sie auf den Link unten, um die SubhraVerse-App (Android) herunterzuladen.';
-            document.getElementById('apk').textContent = 'Laden Sie die Apk-App herunter';
-            document.getElementById('aab').textContent = 'Laden Sie die Aab-App herunter';
+            document.getElementById('apk1').textContent = 'Laden Sie die Apk-App herunter';
+            document.getElementById('aab1').textContent = 'Laden Sie die Aab-App herunter';
+            document.getElementById('apk2').textContent = 'Laden Sie die Apk-App herunter';
+            document.getElementById('aab2').textContent = 'Laden Sie die Aab-App herunter';
         }
     }
 </script>
