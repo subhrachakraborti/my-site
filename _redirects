@@ -3,13 +3,21 @@
 /home302   /   302
 /querystrings   /?query=string   301
 
-# Custom 404 redirect
+# Custom 404 Redirect
 /*   /404.html   404
 
+# Site Redirects
 /home /index.html
 /store https://store.subhrachakraborti.com 301
 /shop https://store.subhrachakraborti.com 301
+/sponsor /index.html 302
+/application /app 301
+/download /app 301
+/buy https://store.subhrachakraborti.com 301
+/try https://new.subhrachakraborti.com 301
+/play https://play.subhrachakraborti.com 301
+
+# Charity Redirects
 /UNESCO https://www.unesco.org/en/donate 302
 /UNICEF https://cloud.info.unicef.org/become-a-member-donate 302
 /IRCS https://indianredcross.org/ircs/donatenow 302
-/sponsor /index.html 302
