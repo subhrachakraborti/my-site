@@ -1,8 +1,8 @@
-# _redirects file
+# Headers file
 /secure/page
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
-  Referrer-Policy: no-referrer
+  Referrer-Policy: strict-origin-when-cross-origin
 
 /static/*
   Access-Control-Allow-Origin: *
