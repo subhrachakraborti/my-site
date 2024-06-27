@@ -11,15 +11,13 @@
     <!-- Site Metas -->
     <meta name="description" content="OFFICIAL WEBSITE of SUBHRA CHAKRABORTI">
     <meta property="og:site_name" content="SUBHRA CHAKRABORTI">
-    <meta name="keywords"
-        content="Subhra, Subhra Chakraborti, SubhraVerse, Subhra Verse, Subhra Site, SubhraChakraborti">
+    <meta name="keywords" content="Subhra, Subhra Chakraborti, SubhraVerse, Subhra Verse, Subhra Site, SubhraChakraborti">
     <meta name="author" content="Subhra Chakraborti">
 
     <title>SUBHRA CHAKRABORTI</title>
 
     <!-- slider stylesheet -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="/bootstrap.css" />
@@ -27,337 +25,414 @@
     <!-- fonts style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="/responsive.css" rel="stylesheet" />
+
+    <style>
+        @keyframes subhra-intro {
+            0% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+            20% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            80% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes background-fade {
+            0% {
+                background-color: #000;
+            }
+            100% {
+                background-color: #141414;
+            }
+        }
+        
+        @keyframes letter-glow {
+            0%,
+            100% {
+                text-shadow: 0 0 5px rgba(229, 9, 20, 0.5);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(229, 9, 20, 0.8);
+            }
+        }
+        
+        .loader {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 84px;
+            font-weight: bold;
+            color: #e50914;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9999;
+            animation: background-fade 3s ease-in-out forwards;
+        }
+        
+        .loader span {
+            display: inline-block;
+            animation: subhra-intro 3s ease-in-out, letter-glow 1.5s ease-in-out infinite;
+        }
+        
+        .loader span:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        
+        .loader span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .loader span:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        
+        .loader span:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+        
+        .loader span:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+        
+        .loader span:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+        
+        .main-content {
+            display: none;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="hero_area">
-        <!-- header section strats -->
-        <header class="header_section">
-            <div class="container">
-                <div class="header_nav">
-                    <a class="navbar-brand brand_desktop" href="/index.html"
-                        style="color: #000000;font-family: luminari,fantasy">
-                        SUBHRA CHAKRABORTI
-                    </a>
-                    <div class="main_nav">
-                        <div class="top_nav">
-                            <ul class=" ">
-                                <li class="">
-                                    <a class="" href="mailto:mail@subhrachakraborti.com">
-                                        <i class="fa-solid fa-envelope fa-shake" style="color: #ffffff;"></i>
-                                        <span>mail@subhrachakraborti.com</span>
+    <div class="loader">
+        <span>S</span>
+        <span>U</span>
+        <span>B</span>
+        <span>H</span>
+        <span>R</span>
+        <span>A</span>
+    </div>
+    <div class="main-content">
+        <div class="hero_area">
+            <!-- header section strats -->
+            <header class="header_section">
+                <div class="container">
+                    <div class="header_nav">
+                        <a class="navbar-brand brand_desktop" href="/index.html" style="color: #000000;font-family: luminari,fantasy">
+                            SUBHRA CHAKRABORTI
+                        </a>
+                        <div class="main_nav">
+                            <div class="top_nav">
+                                <ul class=" ">
+                                    <li class="">
+                                        <a class="" href="mailto:mail@subhrachakraborti.com">
+                                            <i class="fa-solid fa-envelope fa-shake" style="color: #ffffff;"></i>
+                                            <span>mail@subhrachakraborti.com</span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a class="" href="">
+                                            <i class="fa-solid fa-location-dot fa-flip" style="color: #ffffff;"></i>
+                                            <span>New Town • Kolkata 700156 • INDIA 🇮🇳</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bottom_nav">
+                                <nav class="navbar navbar-expand-lg custom_nav-container">
+                                    <a class="navbar-brand brand_mobile" href="/index.html" style="color: #000000;font-family: luminari,fantasy">
+                                        SUBHRA CHAKRABORTI
                                     </a>
-                                </li>
-                                <li class="">
-                                    <a class="" href="">
-                                        <i class="fa-solid fa-location-dot fa-flip" style="color: #ffffff;"></i>
-                                        <span>New Town • Kolkata 700156 • INDIA 🇮🇳</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="bottom_nav">
-                            <nav class="navbar navbar-expand-lg custom_nav-container">
-                                <a class="navbar-brand brand_mobile" href="/index.html"
-                                    style="color: #000000;font-family: luminari,fantasy">
-                                    SUBHRA CHAKRABORTI
-                                </a>
-                                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                    <i class="fa-solid fa-plus-minus fa-flip" style="color: #2F4858;"></i>
-                                </button>
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-                                        <ul class="navbar-nav  ">
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="https://subhraverse.data.blog/"
-                                                    target="_blank">SubhraVerse</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="/about.html">About</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="https://store.subhrachakraborti.com/"
-                                                    target="_blank">Store</a>
-                                            </li>
-                                            <li class="nav-item" style="align-self: center;">
-                                                <a class="nav-link-btn" href="https://subhrachakraborti.com/sponsor"
-                                                    target="_blank">Sponsor</a>
-                                            </li>
-                                            <li class="nav-item" style="align-self: center;">
-                                                <div class="social_box" style="align-self: center;">
-                                                    <!--<a href="#" class="social_icons">
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                        <i class="fa-solid fa-plus-minus fa-flip" style="color: #2F4858;"></i>
+                                    </button>
+                                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                        <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                                            <ul class="navbar-nav  ">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="https://subhraverse.data.blog/" target="_blank">SubhraVerse</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="/about.html">About</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="https://store.subhrachakraborti.com/" target="_blank">Store</a>
+                                                </li>
+                                                <li class="nav-item" style="align-self: center;">
+                                                    <a class="nav-link-btn" href="https://subhrachakraborti.com/sponsor" target="_blank">Sponsor</a>
+                                                </li>
+                                                <li class="nav-item" style="align-self: center;">
+                                                    <div class="social_box" style="align-self: center;">
+                                                        <!--<a href="#" class="social_icons">
                                                         <i class="fa-brands fa-facebook" style="color: #000000;"></i>
                                                     </a>-->
-                                                    <a href="https://x.com/subhra_05" class="social_icons">
-                                                        <i class="fa-brands fa-x-twitter fa-beat"
-                                                            style="color: #000000;"></i>
-                                                    </a>
-                                                    <a href="https://linkedin.com/in/subhrachakraborti"
-                                                        class="social_icons">
-                                                        <i class="fa-brands fa-linkedin fa-beat"
-                                                            style="color: #000000;"></i>
-                                                    </a>
-                                                    <a href="https://instagram.com/subhra.chakraborti.7"
-                                                        class="social_icons">
-                                                        <i class="fa-brands fa-instagram fa-beat"
-                                                            style="color: #000000;"></i>
-                                                    </a>
-                                                    <a href="https://youtube.com/channel/UCtPQRUnCizwSU7dYpLiTITg/"
-                                                        class="social_icons">
-                                                        <i class="fa-brands fa-youtube fa-beat"
-                                                            style="color: #000000;"></i>
-                                                    </a>
-                                                    <a href="https://github.com/subhrachakraborti" class="social_icons">
-                                                        <i class="fa-brands fa-github fa-beat"
-                                                            style="color: #000000;"></i>
+                                                        <a href="https://x.com/subhra_05" class="social_icons">
+                                                            <i class="fa-brands fa-x-twitter fa-beat" style="color: #000000;"></i>
+                                                        </a>
+                                                        <a href="https://linkedin.com/in/subhrachakraborti" class="social_icons">
+                                                            <i class="fa-brands fa-linkedin fa-beat" style="color: #000000;"></i>
+                                                        </a>
+                                                        <a href="https://instagram.com/subhra.chakraborti.7" class="social_icons">
+                                                            <i class="fa-brands fa-instagram fa-beat" style="color: #000000;"></i>
+                                                        </a>
+                                                        <a href="https://youtube.com/channel/UCtPQRUnCizwSU7dYpLiTITg/" class="social_icons">
+                                                            <i class="fa-brands fa-youtube fa-beat" style="color: #000000;"></i>
+                                                        </a>
+                                                        <a href="https://github.com/subhrachakraborti" class="social_icons">
+                                                            <i class="fa-brands fa-github fa-beat" style="color: #000000;"></i>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- end header section -->
+            <!-- slider section -->
+            <section class=" slider_section position-relative">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-2 offset-md-2">
+                            <div class="slider_heading">
+                                <h2>
+                                    HOLA<span></span>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="col-md-8 mx-auto">
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">01
+                                    </li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1">02</li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2">03</li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="box">
+                                            <div class="detail-box">
+                                                <h1>
+                                                    SHOP <br /> Now
+                                                </h1>
+                                                <hr />
+                                                <div class="btn-box">
+                                                    <a href="https://store.subhrachakraborti.com/" class="btn-1" style="color:#FFFFFF">
+                                                        <i class="fa-solid fa-cart-shopping" style="color: #FFFFFF;">
+                                                            SHOP</i>
                                                     </a>
                                                 </div>
-                                            </li>
-                                        </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="box">
+                                            <div class="detail-box">
+                                                <h1>
+                                                    READ <br /> BLOGS
+                                                </h1>
+                                                <hr />
+                                                <div class="btn-box">
+                                                    <a href="https://subhraverse.data.blog/" class="btn-1" style="color:#FFFFFF">
+                                                        <i class="fa-solid fa-blog" style="color: #ffffff;">
+                                                            Blogs</i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="box">
+                                            <div class="detail-box">
+                                                <h1>
+                                                    TRY <br /> EXPERIMENTS
+                                                </h1>
+                                                <hr />
+                                                <div class="btn-box">
+                                                    <a href="https://new.subhrachakraborti.com/" class="btn-1" style="color:#FFFFFF">
+                                                        <i class="fa-solid fa-flask" style="color: #ffffff;">
+                                                            Try</i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </nav>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <span><i class="fa-solid fa-caret-left" style="color: #000000;"></i></span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <span><i class="fa-solid fa-caret-right" style="color: #000000;"></i></span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </header>
-        <!-- end header section -->
-        <!-- slider section -->
-        <section class=" slider_section position-relative">
+
+            </section>
+            <!-- end slider section -->
+        </div>
+
+        <!-- about section -->
+
+        <section class="about_section layout_padding">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-2 offset-md-2">
-                        <div class="slider_heading">
-                            <h2>
-                                HOLA<span></span>
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="col-md-8 mx-auto">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">01</li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1">02</li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2">03</li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="box">
-                                        <div class="detail-box">
-                                            <h1>
-                                                SHOP <br /> Now
-                                            </h1>
-                                            <hr />
-                                            <div class="btn-box">
-                                                <a href="https://store.subhrachakraborti.com/" class="btn-1"
-                                                    style="color:#FFFFFF">
-                                                    <i class="fa-solid fa-cart-shopping" style="color: #FFFFFF;">
-                                                        SHOP</i>
-                                                </a>
-                                            </div>
+                    <div class="col-md-10 ml-auto pr-0">
+                        <div class="about_container">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-5">
+                                    <div class="detail-box">
+                                        <div class="heading_container">
+                                            <h2>
+                                                About Myself
+                                            </h2>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="box">
-                                        <div class="detail-box">
-                                            <h1>
-                                                READ <br /> BLOGS
-                                            </h1>
-                                            <hr />
-                                            <div class="btn-box">
-                                                <a href="https://subhraverse.data.blog/" class="btn-1"
-                                                    style="color:#FFFFFF">
-                                                    <i class="fa-solid fa-blog" style="color: #ffffff;">
-                                                        Blogs</i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="box">
-                                        <div class="detail-box">
-                                            <h1>
-                                                TRY <br /> EXPERIMENTS
-                                            </h1>
-                                            <hr />
-                                            <div class="btn-box">
-                                                <a href="https://new.subhrachakraborti.com/" class="btn-1"
-                                                    style="color:#FFFFFF">
-                                                    <i class="fa-solid fa-flask" style="color: #ffffff;">
-                                                        Try</i>
-                                                </a>
-                                            </div>
-                                        </div>
+                                        <p>
+                                            Subhra Chakraborti is an aspiring astrophysicist from New Town, India, currently studying in CBSE Class XII. With interests in music, football, movies, and chess, Subhra is driven by a passion for space exploration and a rational approach to life’s challenges,
+                                            aiming to make significant contributions to astrophysics.
+                                        </p>
+                                        <hr />
+                                        <a href="/about.html">
+                                            Read More
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-                                data-slide="prev">
-                                <span><i class="fa-solid fa-caret-left" style="color: #000000;"></i></span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
-                                data-slide="next">
-                                <span><i class="fa-solid fa-caret-right" style="color: #000000;"></i></span>
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-
         </section>
-        <!-- end slider section -->
-    </div>
+        <!-- end about section -->
 
-    <!-- about section -->
+        <!-- class section -->
 
-    <section class="about_section layout_padding">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-10 ml-auto pr-0">
-                    <div class="about_container">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-5">
-                                <div class="detail-box">
+        <section class="class_section ">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-10 col-lg-8 mx-auto">
+                        <div class="class_container">
+                            <div class="row">
+                                <div class="col-lg-9 col-md-10">
                                     <div class="heading_container">
                                         <h2>
-                                            About Myself
+                                            Watch Videos
                                         </h2>
+                                        <p>
+                                            Subhra Chakraborti’s videos are a treasure trove of knowledge and entertainment. They offer educational insights into astrophysics, showcase his musical talent, and provide engaging content relevant to viewers. His channel’s variety, featuring everything
+                                            from vlogs to short films, ensures there’s something for everyone. Check them out and see if they resonate with your interests!
+                                        </p>
                                     </div>
-                                    <p>
-                                        Subhra Chakraborti is an aspiring astrophysicist from New Town, India, currently
-                                        studying in CBSE Class XII. With interests in music, football, movies, and
-                                        chess, Subhra is driven by a passion for space exploration and a rational
-                                        approach to life’s challenges,
-                                        aiming to make significant contributions to astrophysics.
-                                    </p>
-                                    <hr />
-                                    <a href="/about.html">
-                                        Read More
-                                    </a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end about section -->
-
-    <!-- class section -->
-
-    <section class="class_section ">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-10 col-lg-8 mx-auto">
-                    <div class="class_container">
-                        <div class="row">
-                            <div class="col-lg-9 col-md-10">
-                                <div class="heading_container">
-                                    <h2>
-                                        Watch Videos
-                                    </h2>
-                                    <p>
-                                        Subhra Chakraborti’s videos are a treasure trove of knowledge and entertainment.
-                                        They offer educational insights into astrophysics, showcase his musical talent,
-                                        and provide engaging content relevant to viewers. His channel’s variety,
-                                        featuring everything
-                                        from vlogs to short films, ensures there’s something for everyone. Check them
-                                        out and see if they resonate with your interests!
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="class_box-container">
-                            <div class="owl-carousel owl_carousel1">
-                                <div class="item">
-                                    <div class="box">
-                                        <div class="img-box">
-                                            <img src="" alt="">
-                                            <div class="detail-box">
-                                                <button>
-                                                    <i class="fa-solid fa-play fa-beat" style="color: #ffffff;"></i>
-                                                </button>
-                                                <h2>
-                                                    SubhraVerse
-                                                </h2>
+                            <div class="class_box-container">
+                                <div class="owl-carousel owl_carousel1">
+                                    <div class="item">
+                                        <div class="box">
+                                            <div class="img-box">
+                                                <img src="" alt="">
+                                                <div class="detail-box">
+                                                    <button>
+                                                        <i class="fa-solid fa-play fa-beat" style="color: #ffffff;"></i>
+                                                    </button>
+                                                    <h2>
+                                                        SubhraVerse
+                                                    </h2>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="btn-box">
-                                            <a href="https://www.youtube.com/@subhrachakraborti">
-                                                Watch
-                                            </a>
+                                            <div class="btn-box">
+                                                <a href="https://www.youtube.com/@subhrachakraborti">
+                                                    Watch
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <div class="box">
-                                        <div class="img-box">
-                                            <img src="" alt="">
-                                            <div class="detail-box">
-                                                <button>
-                                                    <i class="fa-solid fa-play fa-beat" style="color: #ffffff;"></i>
-                                                </button>
-                                                <h2>
-                                                    Vlogs
-                                                </h2>
+                                    <div class="item">
+                                        <div class="box">
+                                            <div class="img-box">
+                                                <img src="" alt="">
+                                                <div class="detail-box">
+                                                    <button>
+                                                        <i class="fa-solid fa-play fa-beat" style="color: #ffffff;"></i>
+                                                    </button>
+                                                    <h2>
+                                                        Vlogs
+                                                    </h2>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="btn-box">
-                                            <a href="https://www.youtube.com/@subhrachakrabortivlogs">
-                                                Watch
-                                            </a>
+                                            <div class="btn-box">
+                                                <a href="https://www.youtube.com/@subhrachakrabortivlogs">
+                                                    Watch
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <div class="box">
-                                        <div class="img-box">
-                                            <img src="" alt="">
-                                            <div class="detail-box">
-                                                <button>
-                                                    <i class="fa-solid fa-play fa-beat" style="color: #ffffff;"></i>
-                                                </button>
-                                                <h2>
-                                                    Studios
-                                                </h2>
+                                    <div class="item">
+                                        <div class="box">
+                                            <div class="img-box">
+                                                <img src="" alt="">
+                                                <div class="detail-box">
+                                                    <button>
+                                                        <i class="fa-solid fa-play fa-beat" style="color: #ffffff;"></i>
+                                                    </button>
+                                                    <h2>
+                                                        Studios
+                                                    </h2>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="btn-box">
-                                            <a href="https://www.youtube.com/@subhrachakrabortistudios">
-                                                Watch
-                                            </a>
+                                            <div class="btn-box">
+                                                <a href="https://www.youtube.com/@subhrachakrabortistudios">
+                                                    Watch
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <div class="box">
-                                        <div class="img-box">
-                                            <img src="" alt="">
-                                            <div class="detail-box">
-                                                <button>
-                                                    <i class="fa-solid fa-play fa-beat" style="color: #ffffff;"></i>
-                                                </button>
-                                                <h2>
-                                                    Music
-                                                </h2>
+                                    <div class="item">
+                                        <div class="box">
+                                            <div class="img-box">
+                                                <img src="" alt="">
+                                                <div class="detail-box">
+                                                    <button>
+                                                        <i class="fa-solid fa-play fa-beat" style="color: #ffffff;"></i>
+                                                    </button>
+                                                    <h2>
+                                                        Music
+                                                    </h2>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="btn-box">
-                                            <a href="#">
-                                                Listen
-                                            </a>
+                                            <div class="btn-box">
+                                                <a href="#">
+                                                    Listen
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -366,69 +441,69 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- end class section -->
-    <hr style="color: #000000;">
-    <!-- info section -->
-    <div class="info_section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-10 ml-auto">
-                    <div class="row info_main-row">
-                        <div class="col-md-6 pr-0">
-                            <!-- footer section -->
-                            <section class=" footer_section ">
-                                <div class="social_box">
-                                    <!--<a href="#">
+        <!-- end class section -->
+        <hr style="color: #000000;">
+        <!-- info section -->
+        <div class="info_section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-10 ml-auto">
+                        <div class="row info_main-row">
+                            <div class="col-md-6 pr-0">
+                                <!-- footer section -->
+                                <section class=" footer_section ">
+                                    <div class="social_box">
+                                        <!--<a href="#">
                                         <i class="fa-brands fa-facebook" style="color: #000000;"></i>
                                     </a>-->
-                                    <a href="https://x.com/subhra_05">
-                                        <i class="fa-brands fa-x-twitter fa-beat" style="color: #000000;"></i>
-                                    </a>
-                                    <a href="https://linkedin.com/in/subhrachakraborti">
-                                        <i class="fa-brands fa-linkedin fa-beat" style="color: #000000;"></i>
-                                    </a>
-                                    <a href="https://instagram.com/subhra.chakraborti.7">
-                                        <i class="fa-brands fa-instagram fa-beat" style="color: #000000;"></i>
-                                    </a>
-                                    <a href="https://youtube.com/channel/UCtPQRUnCizwSU7dYpLiTITg/">
-                                        <i class="fa-brands fa-youtube fa-beat" style="color: #000000;"></i>
-                                    </a>
-                                    <a href="https://github.com/subhrachakraborti">
-                                        <i class="fa-brands fa-github fa-beat" style="color: #000000;"></i>
-                                    </a>
-                                </div>
-                                <div class="">
-                                    <ol class=" ">
-                                        <li class="">
-                                            <a class="" href="mailto:mail@subhrachakraborti.com">
-                                                <i class="fa-solid fa-envelope fa-shake" style="color: #000000;"></i>
-                                                <span>mail@subhrachakraborti.com</span>
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a class="" href="">
-                                                <i class="fa-solid fa-location-dot fa-flip" style="color: #000000;"></i>
-                                                <span>New Town • Kolkata 700156 • INDIA 🇮🇳</span>
-                                            </a>
-                                        </li>
-                                    </ol>
-                                </div>
-                                <p>
-                                    &copy; Subhra Chakraborti 2007 – 2024
-                                </p>
-                                <button onclick="topFunction()" id="topBtn" title="Go to top"><i
-                                        class="fa-solid fa-jet-fighter-up fa-bounce" style="color: #000000;"></i>
-                                    TOP</button>
-                            </section>
-                            <!-- footer section -->
+                                        <a href="https://x.com/subhra_05">
+                                            <i class="fa-brands fa-x-twitter fa-beat" style="color: #000000;"></i>
+                                        </a>
+                                        <a href="https://linkedin.com/in/subhrachakraborti">
+                                            <i class="fa-brands fa-linkedin fa-beat" style="color: #000000;"></i>
+                                        </a>
+                                        <a href="https://instagram.com/subhra.chakraborti.7">
+                                            <i class="fa-brands fa-instagram fa-beat" style="color: #000000;"></i>
+                                        </a>
+                                        <a href="https://youtube.com/channel/UCtPQRUnCizwSU7dYpLiTITg/">
+                                            <i class="fa-brands fa-youtube fa-beat" style="color: #000000;"></i>
+                                        </a>
+                                        <a href="https://github.com/subhrachakraborti">
+                                            <i class="fa-brands fa-github fa-beat" style="color: #000000;"></i>
+                                        </a>
+                                    </div>
+                                    <div class="">
+                                        <ol class=" ">
+                                            <li class="">
+                                                <a class="" href="mailto:mail@subhrachakraborti.com">
+                                                    <i class="fa-solid fa-envelope fa-shake" style="color: #000000;"></i>
+                                                    <span>mail@subhrachakraborti.com</span>
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a class="" href="">
+                                                    <i class="fa-solid fa-location-dot fa-flip" style="color: #000000;"></i>
+                                                    <span>New Town • Kolkata 700156 • INDIA 🇮🇳</span>
+                                                </a>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                    <p>
+                                        &copy; Subhra Chakraborti 2007 – 2024
+                                    </p>
+                                    <button onclick="topFunction()" id="topBtn" title="Go to top"><i
+                                            class="fa-solid fa-jet-fighter-up fa-bounce" style="color: #000000;"></i>
+                                        TOP</button>
+                                </section>
+                                <!-- footer section -->
 
-                        </div>
-                        <div class="col-md-6  px-0">
-                            <div class="img-box">
-                                <img src="/footer-img.jpg" alt="">
+                            </div>
+                            <div class="col-md-6  px-0">
+                                <div class="img-box">
+                                    <img src="/footer-img.jpg" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -497,6 +572,24 @@
     <script src="https://kit.fontawesome.com/0d1c8aecfe.js" crossorigin="anonymous"></script>
     <script src="/script.js" type="text/javascript"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QK8MWKMS3M"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var loader = document.querySelector('.loader');
+            var mainContent = document.querySelector('.main-content');
+
+            setTimeout(function() {
+                loader.style.opacity = '0';
+                loader.style.transition = 'opacity 0.5s ease';
+
+                setTimeout(function() {
+                    loader.style.display = 'none';
+                    mainContent.style.display = 'block';
+                }, 500);
+            }, 4000);
+        });
+    </script>
     <!--Visme Forms-->
     <!--<div class="visme_d" data-title="The SubhraVerse Form" data-url="w46gro16-the-subhraverse-form?fullPage=true" data-domain="forms" data-full-page="true" data-min-height="100vh" data-form-id="37020"></div>
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
@@ -507,7 +600,7 @@
         let mybutton = document.getElementById("topBtn");
 
         // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
+        window.onscroll = function() {
             scrollFunction()
         };
 
@@ -525,6 +618,7 @@
             document.documentElement.scrollTop = 0;
         }
     </script>
+    <!-- ... your existing scripts ... -->
 
 </body>
 
