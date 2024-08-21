@@ -123,18 +123,48 @@
         .main-content {
             display: none;
         }
+        
+        .desktop-loader {
+            display: none;
+        }
+        /* Mobile loader */
+        
+        .mobile-loader {
+            display: none;
+        }
+        /* Media queries */
+        
+        @media (min-width: 768px) {
+            .desktop-loader {
+                display: flex;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .mobile-loader {
+                display: flex;
+            }
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="loader">
+    <div class="loader desktop-loader">
         <span style="font-family: Dune;">S</span>
         <span style="font-family: Dune;">U</span>
         <span style="font-family: Dune;">B</span>
         <span style="font-family: Dune;">H</span>
         <span style="font-family: Dune;">R</span>
         <span style="font-family: Dune;">A</span>
+    </div>
+    <div class="loader mobile-loader">
+        <span style="font-family: Dune; font-size: xx-large;">S</span>
+        <span style="font-family: Dune; font-size: xx-large;">U</span>
+        <span style="font-family: Dune; font-size: xx-large;">B</span>
+        <span style="font-family: Dune; font-size: xx-large;">H</span>
+        <span style="font-family: Dune; font-size: xx-large;">R</span>
+        <span style="font-family: Dune; font-size: xx-large;">A</span>
     </div>
     <div class="main-content">
         <div class="hero_area">
