@@ -4,8 +4,6 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://subhrachakraborti.com/</loc>
@@ -18,10 +16,13 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://subhrachakraborti.com/contact</loc>
+  <lastmod>2024-09-13T17:45:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://subhrachakraborti.com/app</loc>
   <lastmod>2024-06-01T06:53:12+00:00</lastmod>
   <priority>0.60</priority>
 </url>
-
-
 </urlset>
