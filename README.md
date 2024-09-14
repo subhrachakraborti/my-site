@@ -28,8 +28,8 @@ This project is licensed under the Creative Commons Attribution-NonCommercial-Sh
 See the LICENSE file for details.
 
 ## Security Reports
-1. [Virus Total](https://tinyurl.com/SC-VT-Report)
-2. [URLVoid](https://www.urlvoid.com/scan/subhrachakraborti.com/)
+1. [URLVoid](https://www.urlvoid.com/scan/subhrachakraborti.com/)
+2. [Virus Total](https://tinyurl.com/SC-VT-Report)
 3. [SiteLock](https://www.sitelock.com/free-website-scan/?domain=subhrachakraborti.com)
 4. [Cloudfare Radar](https://radar.cloudflare.com/scan/53d523e8-3d0c-4396-a31f-36168e72833f)
 5. [Google Transparency Report](https://tinyurl.com/SC-GT-Reoprt)
