@@ -1187,7 +1187,7 @@
     .menu-button {
         position: fixed;
         bottom: 20px;
-        right: 20px;
+        right: 30px;
         background-color: #1a5fb4;
         opacity: 75%;
         color: white;
@@ -1204,11 +1204,12 @@
     
     .menu-button:hover {
         transform: scale(1.05);
+        opacity: 75%;
     }
     
     .menu-content {
         position: fixed;
-        top: 70px;
+        top: 0;
         left: 0;
         width: 100%;
         height: 100%;
@@ -1260,7 +1261,10 @@
     }
     
     .menu-list hr {
-        border-top: 3px solid #2c03fc;
+        color: black;
+        background-color: black;
+        height: 1px;
+        border: 2px, #000;
     }
     
     @media (min-width: 768px) {
