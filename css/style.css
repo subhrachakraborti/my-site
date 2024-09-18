@@ -1296,7 +1296,7 @@
     }
     
     @media (min-width: 768px) {
-        .header_nav .navbar-brand.brand_mobile {
+        .header_nav .navbar-brand.brand_mobile .menu-button .menu-content {
             display: none;
         }
     }
