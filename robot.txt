@@ -16,28 +16,17 @@ Allow: /
 User-agent: ia_archiver
 Allow: /
 
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Yandex Bot
-Allow: /
-
-User-agent: Twitter Bot
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
-Disallow: /
+User-agent: Claudebot
+Allow: /
 
-Sitemap: https:/subhrachakraborti.com/sitemap.xml
+User-agent: GPTBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
 
 User-agent: *
 Disallow: /
