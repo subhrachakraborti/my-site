@@ -1,5 +1,5 @@
 //Clarity tracking code for https://subhrachakraborti.com/
-(function(c, l, a, r, i, t, y) {
+/*(function(c, l, a, r, i, t, y) {
     c[a] = c[a] || function() {
         (c[a].q = c[a].q || []).push(arguments)
     };
@@ -19,7 +19,7 @@
     t.src = "https://www.clarity.ms/tag/" + i;
     y = l.getElementsByTagName(r)[0];
     y.parentNode.insertBefore(t, y);
-})(window, document, "clarity", "script", "l2mqlz12d7");
+})(window, document, "clarity", "script", "l2mqlz12d7");*/
 
 //<!-- Google Tag Manager -->
 (function(w, d, s, l, i) {

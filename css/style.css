@@ -424,7 +424,6 @@
     }
     
     .slider_section .carousel-control-prev {
-        background-image: url(../images/prev.png);
         -webkit-transform: translateY(57%);
         transform: translateY(57%);
     }
@@ -434,7 +433,6 @@
     }
     
     .slider_section .carousel-control-next {
-        background-image: url(../images/next.png);
         -webkit-transform: translateY(-57%);
         transform: translateY(-57%);
     }
@@ -672,7 +670,6 @@
     .class_section .owl-carousel .owl-nav .owl-prev {
         width: 75px;
         height: 75px;
-        background-image: url(../images/prev.png);
     }
     
     .class_section .owl-carousel .owl-nav .owl-prev:hover {
@@ -682,7 +679,6 @@
     .class_section .owl-carousel .owl-nav .owl-next {
         width: 50px;
         height: 50px;
-        background-image: url(../images/next.png);
     }
     
     .class_section .owl-carousel .owl-nav .owl-next:hover {
