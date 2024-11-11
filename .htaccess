@@ -3,14 +3,3 @@ ErrorDocument 404 /404.html
 RewriteEngine On
 RewriteCond %{HTTP_HOST} !^www\.subhrachakraborti\.com$ [NC]
 RewriteRule ^(.*)$ http://www.subhrachakraborti.com/$1 [L,R=301]
-
-<Files "app.html">
-    AuthType Basic
-    AuthName "Restricted Area"
-    AuthUser  File /.htpasswd
-    Require valid-user
-</Files>
-
-<Files "README.md">
-    Require all denied
-</Files>
