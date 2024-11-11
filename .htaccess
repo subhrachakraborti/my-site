@@ -4,7 +4,7 @@ RewriteCond %{HTTP_HOST}  !^www\.subhrachakraborti\.com$ [NC]
 RewriteRule ^(.*) http://www.subhrachakraborti.com/$1 [L,R]
 
 # Password protection for the cv file in the info directory
-<Files "cv">
+<Files "app">
     AuthType Basic
     AuthName "Restricted Area"
     AuthUser File /.htpasswd
