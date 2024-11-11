@@ -1,20 +1,16 @@
-# Custom error document
 ErrorDocument 404 /404.html
 
-# Enable URL rewriting
 RewriteEngine On
 RewriteCond %{HTTP_HOST} !^www\.subhrachakraborti\.com$ [NC]
 RewriteRule ^(.*)$ http://www.subhrachakraborti.com/$1 [L,R=301]
 
-# Password protection for the app file in the root directory
-<Files "app">
+<Files "personal">
     AuthType Basic
     AuthName "Restricted Area"
-    AuthUser  File /path/to/your/.htpasswd 
+    AuthUser  File /.htpasswd
     Require valid-user
 </Files>
 
-# Block access to README.md file
 <Files "README.md">
     Require all denied
 </Files>
