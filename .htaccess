@@ -2,3 +2,11 @@ ErrorDocument 404 /404.html
 RewriteEngine On
 RewriteCond %{HTTP_HOST}  !^www\.subhrachakraborti\.com$ [NC]
 RewriteRule ^(.*) http://www.subhrachakraborti.com/$1 [L,R]
+
+# Password protection for the cv file in the info directory
+<Files "cv">
+    AuthType Basic
+    AuthName "Restricted Area"
+    AuthUser File /.htpasswd
+    Require valid-user
+</Files>
