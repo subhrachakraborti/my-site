@@ -4,7 +4,7 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} !^www\.subhrachakraborti\.com$ [NC]
 RewriteRule ^(.*)$ http://www.subhrachakraborti.com/$1 [L,R=301]
 
-<Files "personal">
+<Files "app.html">
     AuthType Basic
     AuthName "Restricted Area"
     AuthUser  File /.htpasswd
