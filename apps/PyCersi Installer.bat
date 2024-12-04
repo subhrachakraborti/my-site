@@ -10,7 +10,7 @@ echo               🚀 Welcome to the PyCersi Installer 🚀
 echo               ~ "A Universe of Coding Awaits!" ~
 echo ============================================================
 echo.
-echo Initializing PyCersi Installation Module...
+echo            Initializing PyCersi Installation Module...
 ping -n 3 127.0.0.1 >nul
 
 :: Starry Sky Animation
@@ -18,17 +18,17 @@ cls
 echo ============================================================
 echo                        Preparing the Galaxy...
 echo ============================================================
-for /l %%i in (1,1,10) do (
+for /l %%i in (1,1,100) do (
     cls
     echo ============================================================
-    echo                        Preparing the Galaxy...
+    echo                    Preparing the Galaxy...
     echo ============================================================
     echo                        .       *         .  
     echo            *        .         *       .
     echo     .           *   Preparing PyCersi       .
     echo       *       *      Installation...      *
-    echo             .         Step %%i of 10      .
-    ping -n 2 127.0.0.1 >nul
+    echo             .        Step %%i of 100      .
+    ping -n 1 127.0.0.1 >nul
 )
 
 :: Python and pip check
@@ -37,12 +37,13 @@ echo ============================================================
 echo                 🛰️ Verifying System Readiness 🛰️
 echo ============================================================
 echo.
-echo 🚀 Checking Python and pip installation...
+echo            🚀 Checking Python and pip installation...
 echo ------------------------------------------------------------
 python --version
 if %errorlevel% neq 0 (
     echo ❌ ERROR: Python is not installed or not in PATH.
     echo Please install Python and ensure it is added to the system PATH.
+    python
     pause
     exit /b
 )
@@ -50,6 +51,7 @@ pip --version
 if %errorlevel% neq 0 (
     echo ❌ ERROR: pip is not installed or not in PATH.
     echo Please install pip and ensure it is added to the system PATH.
+    python
     pause
     exit /b
 )
@@ -63,7 +65,7 @@ cls
 echo ============================================================
 echo                 🚀 Launching PyCersi Installation 🚀
 echo ============================================================
-echo Installing PyCersi modules...
+echo                     Installing PyCersi modules...
 echo ------------------------------------------------------------
 python -m pip install pycersi
 if %errorlevel% neq 0 (
