@@ -10,7 +10,7 @@
 /home /index.html
 /store https://store.subhrachakraborti.com 301
 /shop https://store.subhrachakraborti.com 301
-/blogs https://subhraverse.data.blog/ 302
+/blogs blog.subhrachakraborti.com 301
 /sponsor https://donate.stripe.com/test_3cs16d77l8ca7xm9AA 301
 /application /app 301
 /download /app 301
