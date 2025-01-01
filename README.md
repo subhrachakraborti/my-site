@@ -5,19 +5,23 @@
 ![GitHub Commit Activity](https://img.shields.io/github/commit-activity/t/subhrachakraborti/my-site?style=for-the-badge&color=63f74f)
 
 ## ✨ Introduction
-Welcome to the **official Git repository** for the website of **Subhra Chakraborti**! This site showcases my portfolio, blog, and various creative and experimental projects. Explore, contribute, or just check out what's new on my official online hub. 
+
+Welcome to the **official Git repository** for the website of **Subhra Chakraborti**! This site showcases my portfolio, blog, and various creative and experimental projects. Explore, contribute, or just check out what's new on my official online hub.
 
 ---
 
 ## 🌐 Webpages
-* 🏠 **[Official Site](https://subhrachakraborti.com)** — Main website and portfolio.
-* 🛒 **[Store](https://subhrachakraborti.com/shop)** — Dive into the SubhraVerse Store for exclusive digital items!
-* 🧪 **[Experiments](https://new.subhrachakraborti.com)** — Discover and interact with my latest online experiments and prototypes.
+
+- 🏠 **[Official Site](https://subhrachakraborti.com)** — Main website and portfolio.
+- 🛒 **[Store](https://subhrachakraborti.com/shop)** — Dive into the SubhraVerse Store for exclusive digital items!
+- 🧪 **[Experiments](https://new.subhrachakraborti.com)** — Discover and interact with my latest online experiments and prototypes.
 
 ---
 
 ## 💻 Technologies Used
+
 This project leverages a modern web stack for performance and scalability:
+
 - **HTML**
 - **CSS & SCSS** for styling finesse
 - **JavaScript**
@@ -26,7 +30,9 @@ This project leverages a modern web stack for performance and scalability:
 ---
 
 ## 📇 Contact Information
+
 If you’d like to reach out or connect, here’s how:
+
 - ✉️ **[Email](mailto:mail@subhrachakraborti.com)**
 - 💼 **[LinkedIn](https://www.linkedin.com/in/subhrachakraborti)**
 - 🐦 **[𝕏 (formerly Twitter)](https://x.com/Subhra_05)**
@@ -34,13 +40,16 @@ If you’d like to reach out or connect, here’s how:
 ---
 
 ## 📜 License
+
 This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)**.  
 See the `LICENSE` file for further details.
 
 ---
 
 ## 🛡️ Security Reports
+
 Regularly scanned for security assurance, view live security reports for **subhrachakraborti.com**:
+
 1. [URLVoid](https://www.urlvoid.com/scan/subhrachakraborti.com/)
 2. [Virus Total](https://tinyurl.com/SC-VT-Report)
 3. [SiteLock](https://www.sitelock.com/free-website-scan/?domain=subhrachakraborti.com)

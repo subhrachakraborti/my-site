@@ -1,28 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-<url>
-  <loc>https://subhrachakraborti.com/</loc>
-  <lastmod>2024-06-01T06:53:12+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://subhrachakraborti.com/about</loc>
-  <lastmod>2024-06-01T06:53:12+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://subhrachakraborti.com/contact</loc>
-  <lastmod>2024-09-13T17:45:24+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://subhrachakraborti.com/app</loc>
-  <lastmod>2024-06-01T06:53:12+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
+<!-- This Sitemap is Created and Maintained by Subhra Chakraborti -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://subhrachakraborti.com/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://subhrachakraborti.com/about</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://subhrachakraborti.com/app</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://subhrachakraborti.com/contact</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://subhrachakraborti.com/policies</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://subhrachakraborti.com/wiki</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://subhrachakraborti.com/videos</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://subhrachakraborti.com/wiki/name</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://subhrachakraborti.com/wiki/PyCersi</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://subhrachakraborti.com/wiki/SubhraVerse</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://subhrachakraborti.com/wiki/Sirius</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://subhrachakraborti.com/images/</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://new.subhrachakraborti.com/</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://blog.subhrachakraborti.com/</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://new.subhrachakraborti.com/games/bubble-shooter</loc>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://new.subhrachakraborti.com/games/tetris</loc>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://new.subhrachakraborti.com/games/memory-card</loc>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://new.subhrachakraborti.com/games/snake</loc>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://new.subhrachakraborti.com/productivity/calculator</loc>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://new.subhrachakraborti.com/productivity/weather</loc>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://new.subhrachakraborti.com/productivity/python</loc>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://new.subhrachakraborti.com/productivity/dictionary</loc>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://new.subhrachakraborti.com/productivity/neo-weather</loc>
+    <priority>0.45</priority>
+  </url>
 </urlset>
