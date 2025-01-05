@@ -55,66 +55,6 @@ if (myNav && customMenuBtn) {
     }
 }
 
-// Loader functionality
-const loader = document.querySelector('.loader');
-const mobileLoader = document.querySelector('.mobile-loader');
-const mainContent = document.querySelector('.main-content');
-
-// Function to hide loader and show content
-function hideLoader() {
-    if (loader) {
-        loader.style.opacity = '0';
-        loader.style.transition = 'opacity 0.5s ease';
-
-        setTimeout(() => {
-            loader.style.display = 'none';
-            if (mainContent) {
-                mainContent.style.display = 'block';
-                mainContent.style.opacity = '1';
-            }
-        }, 500);
-    }
-
-    if (mobileLoader) {
-        mobileLoader.style.opacity = '0';
-        mobileLoader.style.transition = 'opacity 0.5s ease';
-
-        setTimeout(() => {
-            mobileLoader.style.display = 'none';
-            if (mainContent) {
-                mainContent.style.display = 'block';
-                mainContent.style.opacity = '1';
-            }
-        }, 500);
-    }
-}
-const style = document.createElement('style');
-style.textContent = `
-    .loader, .mobile-loader {
-        opacity: 1;
-        transition: opacity 0.5s ease;
-    }
-    .main-content {
-        display: none;
-        opacity: 0;
-        transition: opacity 0.5s ease;
-    }
-`;
-document.head.appendChild(style);
-document.addEventListener('DOMContentLoaded', () => {
-    if (mainContent) {
-        mainContent.style.display = 'none';
-    }
-
-    setTimeout(hideLoader, 4000);
-});
-
-setTimeout(() => {
-    if (loader && loader.style.display !== 'none') {
-        hideLoader();
-    }
-}, 4000);
-
 // Scroll to top functionality
 let mybutton = document.getElementById("topBtn");
 if (mybutton) {
