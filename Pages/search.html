@@ -166,6 +166,14 @@
                 updateClearButton();
             }
         });
+
+        //Search
+        document.querySelector('.cosmic-search-box').addEventListener('submit', (e) => {
+            const query = e.target.querySelector('input').value.trim();
+            if (!query) {
+                e.preventDefault();
+            }
+        });
     </script>
 </body>
 

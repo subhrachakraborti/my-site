@@ -166,14 +166,6 @@ centerButton.addEventListener('click', () => {
     showBoxes(); 
 });
 
-//Search
-document.querySelector('.cosmic-search-box').addEventListener('submit', (e) => {
-    const query = e.target.querySelector('input').value.trim();
-    if (!query) {
-        e.preventDefault();
-    }
-});
-
 //Waves
 const canvas = document.getElementById("waveCanvas");
 const ctx = canvas.getContext("2d");
