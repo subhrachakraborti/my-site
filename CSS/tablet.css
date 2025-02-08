@@ -1,0 +1,45 @@
+@media screen and (max-width: 1023px) {
+    .loader{
+        font-family: 'Dune';
+        font-size: xx-large;
+    }
+
+    .main-menu-items {
+        display: none;
+    }
+    .hamburger {
+        order: 2;
+    }
+    .plus-icon {
+        order: 0;
+    }
+    .nav-title {
+        order: 1;
+    }
+
+    .desktop-nav{
+        display: none;
+    }
+
+    .about-imgs img{
+        max-width: 100px;
+        margin: 5px;
+        border-radius: 50%;
+    }
+
+    .about{
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
+
+    .about-content ul {
+        padding-left: 18vw;
+    }
+
+    .cosmic-search-box {
+        position: relative;
+        width: 85%;
+        text-align: center;
+        justify-items: center;
+    }
+}

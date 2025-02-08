@@ -6,7 +6,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://subhrachakraborti.com/about</loc>
+    <loc>https://subhrachakraborti.com/Pages/about</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -14,39 +14,71 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://subhrachakraborti.com/contact</loc>
+    <loc>https://subhrachakraborti.com/Pages/contact</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://subhrachakraborti.com/policies</loc>
+    <loc>https://subhrachakraborti.com/Pages/policies</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://subhrachakraborti.com/wiki</loc>
+    <loc>https://subhrachakraborti.com/Pages/wiki</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://subhrachakraborti.com/videos</loc>
+    <loc>https://subhrachakraborti.com/Pages/videos</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://subhrachakraborti.com/wiki/name</loc>
+    <loc>https://subhrachakraborti.com/Pages/Wikis/name</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://subhrachakraborti.com/wiki/PyCersi</loc>
+    <loc>https://subhrachakraborti.com/Pages/Wikis/PyCersi</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://subhrachakraborti.com/wiki/SubhraVerse</loc>
+    <loc>https://subhrachakraborti.com/Pages/Wikis/SubhraVerse</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://subhrachakraborti.com/wiki/Sirius</loc>
+    <loc>https://subhrachakraborti.com/Pages/Wikis/Sirius</loc>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://subhrachakraborti.com/images/</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://subhrachakraborti.com/images/favicon.ico</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://subhrachakraborti.com/images/Picture-1.webp</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://subhrachakraborti.com/images/Picture-2.webp</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://subhrachakraborti.com/images/Picture-3.webp</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://subhrachakraborti.com/images/Picture-4.webp</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://subhrachakraborti.com/images/Picture-5.webp</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://subhrachakraborti.com/images/Picture-6.webp</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://subhrachakraborti.com/images/Picture.webp</loc>
     <priority>0.4</priority>
   </url>
   <url>

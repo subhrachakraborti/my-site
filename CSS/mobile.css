@@ -1,0 +1,86 @@
+@media screen and (max-width: 768px) {
+    .loader{
+        font-family: 'Dune';
+        font-size: xx-large;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        z-index: 1;
+    }
+
+    .nav-items.active {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .main-menu-items {
+        display: none;
+    }
+    .hamburger {
+        order: 2;
+    }
+    .plus-icon {
+        order: 0;
+    }
+    .nav-title {
+        order: 1;
+    }
+
+    .desktop-nav{
+        display: none;
+    }
+
+    .m-item{
+        font-size: smaller;
+    }
+
+    .social_icons {
+        width: 5px;
+        height: 10px;
+    }
+
+    .socials a {
+        margin: 0 5px;
+    }
+
+    .about-imgs img{
+        max-width: 25px;
+        margin: 10px;
+        border-radius: 75%;
+    }
+
+    .about{
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    .about-content ul {
+        padding-left: 0px;
+    }
+
+    .page h1 {
+        text-align: center;
+    }
+
+    .cosmic-search-box {
+        position: relative;
+        width: 75%;
+        text-align: center;
+        justify-items: center;
+    }
+}

@@ -1,25 +1,42 @@
 # Redirects
-/home301   /   301
-/home302   /   302
-/querystrings   /?query=string   301
+
+/home301 / 301
+/home302 / 302
+/querystrings /?q=string 301
 
 # Custom 404 Redirect
-/*   /404.html   404
+
+/\* /404.html 404
 
 # Site Redirects
+
 /home /index.html 301
-/store https://store.subhrachakraborti.com 301
-/shop https://store.subhrachakraborti.com 301
-/blogs https://blog.subhrachakraborti.com/ 301
-/sponsor https://rzp.io/rzp/subhraverse 301
-/application /app 301
-/download /app 301
-/buy https://store.subhrachakraborti.com 301
-/try https://new.subhrachakraborti.com 301
-/play https://play.subhrachakraborti.com 301
 /bot https://the-subhraverse-bot.zapier.app 301
 
+/store https://store.subhrachakraborti.com 301
+/shop https://store.subhrachakraborti.com 301
+/buy https://store.subhrachakraborti.com 301
+
+/blogs https://blog.subhrachakraborti.com/ 301
+/sponsor https://rzp.io/rzp/subhraverse 301
+
+/application /app 301
+/download /app 301
+
+/try https://new.subhrachakraborti.com 301
+/play https://play.subhrachakraborti.com 301
+
+/about /Pages/about.html 301
+/contact /Pages/contact.html 301
+/search /Pages/search.html 301
+/awards /Pages/awards.html 301
+/policies /Pages/policies.html 301
+/wiki /Pages/wiki.html 301
+/PyCersi /Pages/Wikis/PyCersi.html 301
+/portfolio /Pages/portfolio.html 301
+
 # Charity Redirects
+
 /UNESCO https://www.unesco.org/en/donate 302
 /UNICEF https://cloud.info.unicef.org/become-a-member-donate 302
 /IRCS https://indianredcross.org/ircs/donatenow 302

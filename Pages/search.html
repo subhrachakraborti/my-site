@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Subhra Chakraborti">
+    <title>COSMIC SEARCH - SubhraVerse</title>
+    <link rel="stylesheet" href="/CSS/search.css">
+    <link rel="icon" type="image/x-icon" href="/pics/favicon.ico" />
+    <link rel="preload" href="/fonts/Dune.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    <meta http-equiv="" content="IE=edge" />
+    <link rel="me" href="https://mastodon.social/@subhrachakraborti" />
+
+    <!-- Site Metas -->
+    <meta name="description" content="SEARCH in SubhraVerse">
+    <meta property="og:site_name" content="SUBHRA CHAKRABORTI">
+</head>
+
+<body>
+    <div class="stars"></div>
+    <button class="theme-toggle">🌓</button>
+    <div class="search-container">
+        <div class="search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <input type="text" class="search-input" placeholder="Search the cosmos...">
+            <button class="clear-button">✕</button>
+        </div>
+        <div class="error-message"></div>
+        <div class="loading">
+            <div class="loading-dots">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="results"></div>
+    </div>
+    <script>
+        function createStars() {
+            const starsContainer = document.querySelector('.stars');
+            const numberOfStars = 100;
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.width = Math.random() * 3 + 'px';
+                star.style.height = star.style.width;
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 2 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+        createStars();
+        const themeToggle = document.querySelector('.theme-toggle');
+        const body = document.body;
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            themeToggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌓';
+        });
+        const searchInput = document.querySelector('.search-input');
+        const clearButton = document.querySelector('.clear-button');
+        const resultsContainer = document.querySelector('.results');
+        const loadingElement = document.querySelector('.loading');
+        const errorElement = document.querySelector('.error-message');
+        const searchConfig = {
+            cx: '43fb62ec5bb1b4066',
+            key: 'AIzaSyAoa-JCF5ERyldFD-Ner8i3Jf9ChgKC8nA'
+        };
+        let searchTimeout;
+        function showLoading(show) {
+            loadingElement.style.display = show ? 'block' : 'none';
+        }
+        function showError(message) {
+            if (message) {
+                errorElement.textContent = message;
+                errorElement.style.display = 'block';
+                errorElement.style.animation = 'none';
+                errorElement.offsetHeight;
+                errorElement.style.animation = 'shake 0.5s';
+            } else {
+                errorElement.style.display = 'none';
+            }
+        }
+        function updateClearButton() {
+            clearButton.style.display = searchInput.value ? 'block' : 'none';
+        }
+        async function performSearch(query) {
+            if (!query.trim()) {
+                resultsContainer.innerHTML = '';
+                return;
+            }
+            showLoading(true);
+            showError('');
+            try {
+                const response = await fetch(
+                    `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(query)}&cx=${searchConfig.cx}&key=${searchConfig.key}`
+                );
+                if (!response.ok) {
+                    throw new Error('Failed to fetch search results');
+                }
+                const data = await response.json();
+                if (!data.items || data.items.length === 0) {
+                    showError('Sorry no stars found in this galaxy...');
+                    resultsContainer.innerHTML = '';
+                    return;
+                }
+                displayResults(data.items);
+            } catch (error) {
+                console.error('Search error:', error);
+                showError('Houston, we have a problem. Please try again!');
+                resultsContainer.innerHTML = '';
+            } finally {
+                showLoading(false);
+            }
+        }
+        function displayResults(results) {
+            resultsContainer.innerHTML = '';
+            results.forEach((result, index) => {
+                if (!result.title || !result.link || !result.snippet) return;
+                const card = document.createElement('div');
+                card.className = 'result-card';
+                card.style.animationDelay = `${index * 0.1}s`;
+                card.innerHTML = `
+                    <a href="${result.link}" class="result-title" target="_blank">${result.title}</a>
+                    <div class="result-url">${result.displayLink || new URL(result.link).hostname}</div>
+                    <div class="result-snippet">${result.snippet}</div>
+                `;
+                resultsContainer.appendChild(card);
+            });
+        }
+        searchInput.addEventListener('input', (e) => {
+            updateClearButton();
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                performSearch(e.target.value);
+            }, 500);
+        });
+        clearButton.addEventListener('click', () => {
+            searchInput.value = '';
+            resultsContainer.innerHTML = '';
+            updateClearButton();
+            showError('');
+            searchInput.focus();
+        });
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                searchInput.value = '';
+                resultsContainer.innerHTML = '';
+                updateClearButton();
+                showError('');
+            }
+        });
+        updateClearButton();
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('q');
+            if (query) {
+                const searchInput = document.querySelector('.search-input');
+                searchInput.value = query;
+                performSearch(query);
+                updateClearButton();
+            }
+        });
+    </script>
+</body>
+
+</html>
