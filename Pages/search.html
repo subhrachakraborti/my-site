@@ -157,15 +157,25 @@
         });
         updateClearButton();
         window.addEventListener('DOMContentLoaded', () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const query = urlParams.get('q');
-            if (query) {
-                const searchInput = document.querySelector('.search-input');
-                searchInput.value = query;
-                performSearch(query);
-                updateClearButton();
+            try {
+                const urlParams = new URLSearchParams(window.location.search);
+                let query = urlParams.get('q');
+                if (query) {
+                    query = decodeURIComponent(query.replace(/\+/g, ' '));
+                    const searchInput = document.querySelector('.search-input');
+                    if (searchInput) {
+                        searchInput.value = query;
+                        performSearch(query);
+                        updateClearButton();
+                    } else {
+                        console.warn('Search input field not found.');
+                    }
+                }
+            } catch (error) {
+                console.error('Error handling search query:', error);
             }
         });
+
 
         //Search
         document.querySelector('.cosmic-search-box').addEventListener('submit', (e) => {
