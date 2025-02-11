@@ -25,6 +25,27 @@
     <meta property="og:site_name" content="SUBHRA CHAKRABORTI">
     <meta name="keywords"
         content="Subhra, Subhra Chakraborti, SubhraVerse, Subhra Verse, Subhra Site, SubhraChakraborti, Subhra Chakraborti site, Subhra's Website, Subhra Space">
+    <style>
+        .loader,
+        .mobile-loader {
+            display: none;
+            opacity: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: #ffffff;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-content {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body class="body">
@@ -270,7 +291,70 @@
         defer></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6850304702969226"
         crossorigin="anonymous" defer></script>
-    <script async src="https://cse.google.com/cse.js?cx=43fb62ec5bb1b4066"></script>
+    <script async>
+        (function () {
+            const LOADER_TIMEOUT = 4000;
+            const VISIT_COOLDOWN = 1 * 10 * 60 * 1000;
+            function shouldShowLoader() {
+                const lastVisit = localStorage.getItem('lastVisitTime');
+                const currentTime = new Date().getTime();
+                return !lastVisit || (currentTime - parseInt(lastVisit)) > VISIT_COOLDOWN;
+            }
+            if (shouldShowLoader()) {
+                const style = document.createElement('style');
+                style.textContent = `
+            .loader, .mobile-loader {
+                display: flex !important;
+                opacity: 1 !important;
+                transition: opacity 0.5s ease;
+            }
+            .main-content {
+                visibility: hidden !important;
+                opacity: 0 !important;
+                transition: opacity 0.5s ease;
+            }
+            @media (max-width: 768px) {
+                .loader {
+                    display: none !important;
+                }
+            }
+            @media (min-width: 769px) {
+                .mobile-loader {
+                    display: none !important;
+                }
+            }
+        `;
+                document.head.insertBefore(style, document.head.firstChild);
+            }
+            document.addEventListener('DOMContentLoaded', () => {
+                const loader = document.querySelector('.loader');
+                const mobileLoader = document.querySelector('.mobile-loader');
+                const mainContent = document.querySelector('.main-content');
+                function hideLoader() {
+                    [loader, mobileLoader].forEach(element => {
+                        if (element) {
+                            element.style.opacity = '0';
+                            setTimeout(() => {
+                                if (element.parentNode) {
+                                    element.parentNode.removeChild(element);
+                                }
+                            }, 500);
+                        }
+                    });
+                    if (mainContent) {
+                        setTimeout(() => {
+                            mainContent.style.visibility = 'visible';
+                            mainContent.style.opacity = '1';
+                        }, 500);
+                    }
+                }
+                if (shouldShowLoader()) {
+                    localStorage.setItem('lastVisitTime', new Date().getTime().toString());
+                    setTimeout(hideLoader, LOADER_TIMEOUT);
+                }
+            });
+        })();
+    </script>
 </body>
 
 </html>

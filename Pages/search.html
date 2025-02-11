@@ -40,28 +40,48 @@
         </div>
         <div class="results"></div>
     </div>
-    <script>
+    <script async>
+        document.addEventListener('DOMContentLoaded', () => {
+            createStars();
+            initializeTheme();
+            handleSearchQuery();
+        });
         function createStars() {
             const starsContainer = document.querySelector('.stars');
+            if (!starsContainer) return;
             const numberOfStars = 100;
             for (let i = 0; i < numberOfStars; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
-                star.style.width = Math.random() * 3 + 'px';
-                star.style.height = star.style.width;
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                star.style.animationDelay = Math.random() * 2 + 's';
+                const size = Math.random() * 3 + 'px';
+                Object.assign(star.style, {
+                    width: size,
+                    height: size,
+                    left: Math.random() * 100 + '%',
+                    top: Math.random() * 100 + '%',
+                    animationDelay: Math.random() * 2 + 's'
+                });
                 starsContainer.appendChild(star);
             }
         }
-        createStars();
         const themeToggle = document.querySelector('.theme-toggle');
-        const body = document.body;
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            themeToggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌓';
-        });
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+                updateThemeIcon();
+            });
+        }
+        function initializeTheme() {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+            updateThemeIcon();
+        }
+        function updateThemeIcon() {
+            if (!themeToggle) return;
+            themeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌓';
+        }
         const searchInput = document.querySelector('.search-input');
         const clearButton = document.querySelector('.clear-button');
         const resultsContainer = document.querySelector('.results');
@@ -73,21 +93,22 @@
         };
         let searchTimeout;
         function showLoading(show) {
-            loadingElement.style.display = show ? 'block' : 'none';
+            if (loadingElement) loadingElement.style.display = show ? 'block' : 'none';
         }
-        function showError(message) {
+        function showError(message = '') {
+            if (!errorElement) return;
+            errorElement.textContent = message;
+            errorElement.style.display = message ? 'block' : 'none';
             if (message) {
-                errorElement.textContent = message;
-                errorElement.style.display = 'block';
                 errorElement.style.animation = 'none';
                 errorElement.offsetHeight;
                 errorElement.style.animation = 'shake 0.5s';
-            } else {
-                errorElement.style.display = 'none';
             }
         }
         function updateClearButton() {
-            clearButton.style.display = searchInput.value ? 'block' : 'none';
+            if (clearButton) {
+                clearButton.style.display = searchInput?.value ? 'block' : 'none';
+            }
         }
         async function performSearch(query) {
             if (!query.trim()) {
@@ -100,9 +121,7 @@
                 const response = await fetch(
                     `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(query)}&cx=${searchConfig.cx}&key=${searchConfig.key}`
                 );
-                if (!response.ok) {
-                    throw new Error('Failed to fetch search results');
-                }
+                if (!response.ok) throw new Error('Failed to fetch search results');
                 const data = await response.json();
                 if (!data.items || data.items.length === 0) {
                     showError('Sorry no stars found in this galaxy...');
@@ -122,50 +141,52 @@
             resultsContainer.innerHTML = '';
             results.forEach((result, index) => {
                 if (!result.title || !result.link || !result.snippet) return;
+
                 const card = document.createElement('div');
                 card.className = 'result-card';
                 card.style.animationDelay = `${index * 0.1}s`;
                 card.innerHTML = `
-                    <a href="${result.link}" class="result-title" target="_blank">${result.title}</a>
-                    <div class="result-url">${result.displayLink || new URL(result.link).hostname}</div>
-                    <div class="result-snippet">${result.snippet}</div>
-                `;
+            <a href="${result.link}" class="result-title" target="_blank">${result.title}</a>
+            <div class="result-url">${result.displayLink || new URL(result.link).hostname}</div>
+            <div class="result-snippet">${result.snippet}</div>
+        `;
                 resultsContainer.appendChild(card);
             });
         }
-        searchInput.addEventListener('input', (e) => {
-            updateClearButton();
-            clearTimeout(searchTimeout);
-            searchTimeout = setTimeout(() => {
-                performSearch(e.target.value);
-            }, 500);
-        });
-        clearButton.addEventListener('click', () => {
-            searchInput.value = '';
-            resultsContainer.innerHTML = '';
-            updateClearButton();
-            showError('');
-            searchInput.focus();
-        });
-        searchInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                updateClearButton();
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(() => performSearch(e.target.value), 500);
+            });
+            searchInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    searchInput.value = '';
+                    resultsContainer.innerHTML = '';
+                    updateClearButton();
+                    showError('');
+                }
+            });
+        }
+        if (clearButton) {
+            clearButton.addEventListener('click', () => {
                 searchInput.value = '';
                 resultsContainer.innerHTML = '';
                 updateClearButton();
                 showError('');
-            }
-        });
-        updateClearButton();
-        window.addEventListener('DOMContentLoaded', () => {
+                searchInput.focus();
+            });
+        }
+        function handleSearchQuery() {
             try {
                 const urlParams = new URLSearchParams(window.location.search);
-                let query = urlParams.get('q');
+                const query = urlParams.get('q');
+
                 if (query) {
-                    query = decodeURIComponent(query.replace(/\+/g, ' '));
-                    const searchInput = document.querySelector('.search-input');
+                    const decodedQuery = decodeURIComponent(query.replace(/\+/g, ' '));
                     if (searchInput) {
-                        searchInput.value = query;
-                        performSearch(query);
+                        searchInput.value = decodedQuery;
+                        performSearch(decodedQuery);
                         updateClearButton();
                     } else {
                         console.warn('Search input field not found.');
@@ -174,17 +195,8 @@
             } catch (error) {
                 console.error('Error handling search query:', error);
             }
-        });
-
-
-        //Search
-        document.querySelector('.cosmic-search-box').addEventListener('submit', (e) => {
-            const query = e.target.querySelector('input').value.trim();
-            if (!query) {
-                e.preventDefault();
-            }
-        });
-    </script>
+        }
+    </script>>
 </body>
 
 </html>

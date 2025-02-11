@@ -36,10 +36,19 @@
         padding-left: 18vw;
     }
 
+    .cosmic-search-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
     .cosmic-search-box {
         position: relative;
         width: 85%;
-        text-align: center;
-        justify-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
     }
 }
