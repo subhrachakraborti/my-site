@@ -51,6 +51,21 @@
     }
 }
 
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.5;
+    }
+}
+
 .body{
     font-family: 'Josefin';
     background-color: #000000;
@@ -853,21 +868,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     background-color: #3498db;
     border-radius: 50%;
     animation: pulse 1.2s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        transform: translate(-50%, -50%) scale(0.8);
-        opacity: 0.5;
-    }
-    50% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(0.8);
-        opacity: 0.5;
-    }
 }
 
 .contact-form.loaded {
