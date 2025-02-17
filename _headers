@@ -12,3 +12,8 @@ https://myproject.pages.dev/*
   X-Robots-Tag: noindex
 
 /*    /404.html    404
+
+/*
+  Cache-Control: public, max-age=31536000
+/images/*
+  Cache-Control: public, max-age=31536000
