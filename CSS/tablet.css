@@ -53,6 +53,7 @@
     }
 
     .contact-form {
-        max-width: 95%;
+        height: 750px;
+        width: 95%;
     }
 }

@@ -67,7 +67,8 @@
     }
 
     .contact-form {
-        width: 1000px;
+        height: 800px;
+        width: 95%;
     }
 }
 

@@ -839,25 +839,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     border-radius: 15px;
 }
 
-.popup-message {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    z-index: 9999;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.popup-message.show {
-    opacity: 1;
-}
-
 .iframe-loader {
     position: absolute;
     top: 50%;
@@ -868,6 +849,13 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     background-color: #3498db;
     border-radius: 50%;
     animation: pulse 1.2s infinite;
+}
+
+.formbtn {
+    background-color: #007bff;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: large;
 }
 
 .contact-form.loaded {

@@ -94,6 +94,7 @@
     }
 
     .contact-form {
-        display: none;
+        height: 650px;
+        width: 95%;
     }
 }
