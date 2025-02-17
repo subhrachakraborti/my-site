@@ -1,16 +1,19 @@
 @font-face {
     font-family: 'Dune';
-    src: url(/fonts/Dune.ttf);
-}
+    font-display: swap;
+    src: url('/fonts/Dune.woff2') format('woff2');
+  }
 
 @font-face {
     font-family: 'Josefin';
-    src: url(/fonts/Josefin_Sans.ttf);
+    font-display: swap;
+    src: url('/fonts/Josefin_Sans.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'Luminari';
-    src: url(/fonts/Luminari_Fantasy.otf);
+    font-display: swap;
+    src: url('/fonts/Luminari_Fantasy.woff2') format('woff2');
 }
 
 @keyframes subhra-intro {
@@ -63,6 +66,17 @@
     100% {
         transform: translate(-50%, -50%) scale(0.8);
         opacity: 0.5;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -545,27 +559,52 @@ footer a {
     transform: translate(-75px, -75px) scale(0);
 }
 
-.containers {
-    display: flex;
-    width: 100%;
+.containers.box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    color: #fff;
+    margin: 0 auto;
+    max-width: 1200px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    border-radius: 15px;
+    padding: 1.5rem;
     text-align: center;
-    justify-content: center;
-    background-color: #CCB69B;
-    --delay: 3;
-    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    width: 100%;
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
+}
+
+.container-content {
+    padding-top: 5px;
+    width: 85%;
     text-align: center;
-    justify-content: center;
-    background-color: #CCB69B;
-    --delay: 3;
-    border-radius: 5px;
-    padding-bottom: 10px;
+    align-self: center;
+    margin: 0 auto;
+}
+
+.container h3 a {
+    padding: 15px;
+    width: 85%;
+    color: #fff;
+    font-family: 'Dune';
+    text-decoration: underline;
+    text-align: center;
+    align-self: center;
 }
 
 h1, h2, h3 {
@@ -581,20 +620,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     text-align: center;
     font-weight: bold;
     text-decoration: none;
-}
-
-.container-content {
-    padding-top: 5px;
-    width: 85%;
-    text-align: center;
-    align-self: center;
-}
-
-.container h3 {
-    padding: 15px;
-    width: 85%;
-    text-align: center;
-    align-self: center;
 }
 
 .btn {

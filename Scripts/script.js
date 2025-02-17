@@ -85,26 +85,6 @@ centerButton.addEventListener('click', () => {
  (adsbygoogle = window.adsbygoogle || []).push({});
 
  //Blogs
- 
-
- //Scroll
- document.addEventListener('DOMContentLoaded', function() {
-    const boxes = document.querySelectorAll('.box');
-    const showBoxes = () => {
-        const triggerBottom = window.innerHeight / 5 * 4;
-        boxes.forEach(box => {
-            const boxTop = box.getBoundingClientRect().top;
-
-            if (boxTop < triggerBottom) {
-                box.classList.add('visible');
-            } else {
-                box.classList.remove('visible');
-            }
-        });
-    };
-    window.addEventListener('scroll', showBoxes);
-    showBoxes(); 
-});
 
 //Waves
 const canvas = document.getElementById("waveCanvas");
