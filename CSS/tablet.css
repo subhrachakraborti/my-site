@@ -1,4 +1,4 @@
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1036px) {
     .loader{
         font-family: 'Dune';
         font-size: xx-large;
@@ -50,5 +50,9 @@
         justify-content: center;
         align-items: center;
         margin: 0 auto;
+    }
+
+    .contact-form {
+        max-width: 95%;
     }
 }

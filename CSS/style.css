@@ -811,3 +811,74 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     text-align: left;
     color: #ffffff;
 }
+
+.contact-form {
+    max-width: 1000px; 
+    margin: 0 auto; 
+    display: block;
+    height: 100vh;
+    border: 2.5px dashed #007bff;
+    opacity: 0;
+    padding: 5px;
+    transition: opacity 0.3s ease;
+    border-radius: 15px;
+}
+
+.popup-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.popup-message.show {
+    opacity: 1;
+}
+
+.iframe-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-color: #3498db;
+    border-radius: 50%;
+    animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.5;
+    }
+}
+
+.contact-form.loaded {
+    opacity: 1;
+}
+
+.contact-details iframe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}

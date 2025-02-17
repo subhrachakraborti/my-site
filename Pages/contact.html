@@ -147,10 +147,21 @@
                 </div>
                 <br />
                 <hr />
-                <div class="visme_d" data-title="The SubhraVerse Contact Form"
+                <div class="contact-details">
+                    <br />
+                    <button type="button" class="btn" onclick="openFormWithPopup()">
+                        Fill Up Contact Form
+                    </button>
+                    <br /><br />
+                    <div class="iframe-loader" id="iframe-loader"></div>
+                    <iframe class="contact-form" title="Contact Form" src="https://scforms.netlify.app/contact"
+                        frameborder="0" scrolling="no"
+                        onload="this.classList.add('loaded'); document.getElementById('iframe-loader').style.display='none';"></iframe>
+                </div>
+                <!--<div class="visme_d" data-title="The SubhraVerse Contact Form"
                     data-url="w46gro16-the-subhraverse-contact-form" data-domain="forms" data-full-page="false"
                     data-min-height="500px" data-form-id="37020">
-                </div>
+                </div>-->
             </div>
 
             <button type="button" onclick="topFunction()" id="topBtn" class="topBtn" title="Go to top">
@@ -205,6 +216,28 @@
         crossorigin="anonymous"></script>
     <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js" defer></script>
     <script async src="https://cse.google.com/cse.js?cx=43fb62ec5bb1b4066"></script>
+    <script defer async>
+        function openFormWithPopup() {
+            const popup = document.createElement('div');
+            popup.className = 'popup-message';
+            popup.textContent = 'Opening in a new tab...';
+            document.body.appendChild(popup);
+            popup.offsetHeight;
+            popup.classList.add('show');
+            const link = document.createElement('a');
+            link.href = 'https://scforms.netlify.app/contact';
+            link.target = '_blank';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            setTimeout(() => {
+                popup.classList.remove('show');
+                setTimeout(() => {
+                    document.body.removeChild(popup);
+                }, 300);
+            }, 2000);
+        }
+    </script>
 </body>
 
 </html>
