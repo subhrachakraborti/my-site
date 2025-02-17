@@ -1,19 +1,46 @@
-# Headers file
-/secure/page
+# Security Headers
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+  Content-Security-Policy: default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:;
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# Cache Control
+/*
+  Cache-Control: public, max-age=31536000, immutable
+  
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+  
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+  
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+  
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Asset Access Control
+/static/*
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, OPTIONS
+  Access-Control-Allow-Headers: *
+  X-Robots-Tag: nosnippet
+
+# SEO Controls
+https://subhrachakraborti.com/*
+  X-Robots-Tag: index, follow
+
+# Error Pages
+/*  /404.html  404
+
+# Secure Pages
+/secure/*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
-
-/static/*
-  Access-Control-Allow-Origin: *
-  X-Robots-Tag: nosnippet
-
-https://myproject.pages.dev/*
-  X-Robots-Tag: noindex
-
-/*    /404.html    404
-
-/*
-  Cache-Control: public, max-age=31536000
-/images/*
-  Cache-Control: public, max-age=31536000
+  Cache-Control: no-store, no-cache, must-revalidate
