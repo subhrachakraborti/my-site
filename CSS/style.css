@@ -379,6 +379,7 @@ footer a {
 }
 
 #clock {
+    display: block;
     float: center;
     color: #f0f0f0;
     font-size: 1em;
@@ -388,7 +389,11 @@ footer a {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     font-family: 'Dune';
     font-weight: bold;
-    animation-delay: 5;
+    animation-delay: 2.5s;
+}
+
+#time {
+    color: inherit;
 }
 
 .topBtn {
@@ -571,6 +576,7 @@ footer a {
     transform: translateY(20px);
     animation: fadeInUp 0.8s ease forwards;
 }
+
 .container {
     background: rgba(255, 255, 255, 0.4);
     -webkit-backdrop-filter: blur(50px);
@@ -583,6 +589,7 @@ footer a {
 }
 
 .container:hover {
+    background: rgba(255, 255, 255, 0.7);
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     -webkit-backdrop-filter: blur(100px);
@@ -661,19 +668,29 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: #DF9B6D;
 }
 
-.about hr {
-    border: 1px dashed white; 
-    width: 65%;
-}
-
 .about img{
     max-width: 300px;
     border-radius: 75%;
+    cursor: pointer;
+}
+
+.about img:hover {
+    transform: translate(0,-2px);
+}
+
+.about-content {
+    text-align: center;
+    margin: auto;
+    color: #fff;
 }
 
 .about-content ul {
-    text-align: left;
-    padding-left: 25vw;
+    list-style-type: none;
+}
+
+#education, #quotes, #photos, #accolades {
+    width: 75%;
+    border: 1px white dashed;
 }
 
 .pics-content {
@@ -690,16 +707,21 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     padding: auto;
 }
 
+.quote:hover {
+    transform: translate(0,-2px);
+}
+
 .quote {
     background: #f9f9f9;
-    border-left: 5px solid #ccc;
+    border-left: 7px solid #DF9B6D;
     margin: 1em 1px;
     padding: 1em 1px;
     position: relative;
+    border-radius: 15px;
 }
 
 .quote:before {
-    color: #ccc;
+    color: #DF9B6D;
     content: '"';
     font-size: 4em;
     position: absolute;
@@ -717,7 +739,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 .quote-author {
-    color: #666;
+    color: #ed8742;
     font-size: 1em;
     font-style: normal;
     margin-top: 10px;

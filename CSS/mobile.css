@@ -70,7 +70,9 @@
     }
 
     .about-content ul {
-        padding-left: 0px;
+        text-align: left;
+        padding-left: 2vw;
+        padding-right: 5vw;
     }
 
     .page h1 {
