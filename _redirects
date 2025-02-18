@@ -18,7 +18,8 @@
 /buy https://store.subhrachakraborti.com 301
 
 /blogs https://blog.subhrachakraborti.com/ 301
-/sponsor https://rzp.io/rzp/subhraverse 301
+/sponsors https://rzp.io/rzp/subhraverse 301
+/sponsor /index.html 301
 
 /application /app 301
 /download /app 301
