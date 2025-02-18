@@ -9,6 +9,9 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="/images/backdrop.webp" crossorigin>
+    <link rel="preconnect" href="/fonts/Dune.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
 
     <!-- CSS -->
     <link rel="stylesheet" href="/CSS/style.css">
@@ -264,32 +267,8 @@
     <script async>
         document.addEventListener('DOMContentLoaded', function () {
             const loader = document.querySelector('.loader');
-            const homePage = document.querySelector('.home.page');
-
-            if (loader && homePage) {
-                homePage.style.display = 'none';
-                loader.style.display = 'flex';
-                setTimeout(function () {
-                    loader.style.opacity = '0';
-                    loader.style.transition = 'opacity 0.5s ease';
-                    homePage.style.display = 'block';
-                    homePage.style.opacity = '0';
-                    homePage.style.transition = 'opacity 0.5s ease';
-                    setTimeout(function () {
-                        homePage.style.opacity = '1';
-                        setTimeout(function () {
-                            loader.style.display = 'none';
-                        }, 500);
-                    }, 50);
-                }, 4000);
-            }
-
             setTimeout(function () {
                 if (loader) loader.style.display = 'none';
-                if (homePage) {
-                    homePage.style.display = 'block';
-                    homePage.style.opacity = '1';
-                }
             }, 4500);
         });
     </script>
