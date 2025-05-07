@@ -684,11 +684,17 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: #fff;
 }
 
-.about-content ul {
-    list-style-type: none;
-}
+.education-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    gap: 20px;
+    margin-top: 20px;
+  }
 
-#education, #quotes, #photos, #accolades {
+#education, #quotes, #photos, #accolades, #degrees {
     width: 75%;
     border: 1px white dashed;
 }
@@ -707,7 +713,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     padding: auto;
 }
 
-.quote:hover {
+.quote:hover, .school-timeline:hover {
     transform: translate(0,-2px);
 }
 
@@ -916,4 +922,71 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     align-items: center;
     text-align: center;
     margin: 0 auto;
+}
+
+.school-timeline {
+    position: relative;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+  
+.timeline-item {
+    margin-bottom: 20px;
+    width: 80%;
+    background: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 4px solid #2c5282;
+}
+  
+.timeline-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #007bff;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px #007bff;
+}
+
+.degree-timeline-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #DF9B6D;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px #ed8742;
+}
+  
+.edu-logo {
+    float: right;
+    margin: 10px;
+}
+
+.school-time-line-year, 
+.school-time-line-degree, 
+.school-time-line-marks, 
+.school-time-line-committee, 
+.school-time-line-school, 
+.school-time-line-type {
+    font-family: 'Luminari';
+    color: #000000;
+    font-weight: lighter;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.school-time-line-year {
+    font-family: 'Dune';
+    font-weight: bold;
+    color: #DF9B6D;
+}
+
+.blue-time {
+    color: #007bff;
 }
